@@ -20,8 +20,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Define your output directory path
-OUTPUT_DIR = os.path.join(BASE_DIR, 'output')  # This will create the 'output' directory in your project's root directory
+# settings.py
+OUTPUT_DIR = os.path.join(BASE_DIR, 'output')  # or any path where you want to save files
 
 
 # Quick-start development settings - unsuitable for production

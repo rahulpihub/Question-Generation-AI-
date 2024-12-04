@@ -1,5 +1,4 @@
 {% load static %}
-{% load custom_filters %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,10 +19,10 @@
     <form method="post">
         {% csrf_token %}
         <label for="topic">Topic:</label>
-        <input type="text" id="topic" name="topic" placeholder="Enter the topic" required><br><br>
+        <input type="text" id="topic" name="topic" required><br><br>
 
         <label for="subtopic">Subtopic:</label>
-        <input type="text" id="subtopic" name="subtopic" placeholder="Enter the subtopic" required><br><br>
+        <input type="text" id="subtopic" name="subtopic" required><br><br>
 
         <label for="level">Level:</label>
         <select id="level" name="level">
@@ -40,7 +39,7 @@
         </select><br><br>
 
         <label for="num_questions">Number of Questions:</label>
-        <input type="text" id="num_questions" name="num_questions" placeholder="Enter the number of questions" required><br><br>
+        <input type="text" id="num_questions" name="num_questions" required><br><br>
 
         <button type="submit">Generate Questions</button>
     </form>
@@ -49,15 +48,12 @@
         <p style="color: red;">{{ error }}</p>
     {% endif %}
 
-    <!-- Updated code in the template -->
     {% if success %}
         <p style="color: green;">{{ success }}</p>
-        <!-- Show the download button if the CSV file is generated -->
         <button onclick="showDownloadPopup()">
-            <a href="{% url 'download_csv' file_name=csv_file_path|basename %}">Download CSV</a>
+            <a href="{% url 'download_csv' csv_file_name %}" download>Download CSV</a>
         </button>
     {% endif %}
-
 
     {% if questions %}
         <h2>Generated Questions:</h2>
