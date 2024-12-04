@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+/* Messages */
+p {
+    text-align: center;
+    font-size: 16px;
+}
+
+p.error {
+    color: red;
+}
+
+p.success {
+    color: green;
+}
+
+/* Download Button */
+button a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+button a:hover {
+    background-color: #45a049;
+}
+
+/* Generated Questions Section */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e0f7fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form label,
+    form input,
+    form select,
+    form button {
+        font-size: 14px;
+    }
+}
