@@ -1,15 +1,3 @@
 Question,Answer
-Databricks is a unified _______ platform.,data analytics
-Data engineers use Databricks to build and manage _______.,data pipelines
-Databricks is built on top of _______.,Apache Spark
-_______ is Databricks' collaborative notebook environment.,Databricks Notebooks
-"Databricks allows data engineers to write code in languages like Python, SQL, Scala, and _______.",R
-Data engineers use Databricks to process and transform _______ data.,large-scale
-Databricks Delta Lake is an open-source _______ layer.,storage
-"Delta Lake provides _______, which is crucial for data quality.",ACID transactions
-Data engineers can use Databricks to prepare data for _______ and machine learning.,analytics
-"Databricks integrates with various data sources like Amazon S3, Azure Blob Storage, and _______.",Google Cloud Storage
-Data engineers use _______ to orchestrate data pipelines in Databricks.,workflows
-_______ is a key feature of Databricks that simplifies cluster management.,autoscaling
-Databricks offers a _______ interface for managing data and resources.,web-based
-Data engineers use Databricks to build data solutions in the _______.,cloud
+sf,wer
+wer,er
