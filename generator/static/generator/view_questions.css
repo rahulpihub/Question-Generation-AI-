@@ -71,33 +71,51 @@ a {
     padding: 10px 15px;
     border: 1px solid #4CAF50; /* Green border */
     border-radius: 5px;
-    background-color: white; /* White background for link */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-a:hover {
-    background-color: #4CAF50; /* Green background on hover */
-    color: white; /* White text on hover */
+    background-color: 4CAF50; /* White background for link */
+    font-weight: bold; /* Make the text bold */
 }
 
 /* Button styling */
 button {
     background-color: #4CAF50; /* Green background for button */
-    color: #4CAF50;
+    color: 4CAF50; /* White text */
     border: none;
     font-size: 1.1em;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    padding: 8px 5px; /* Add some padding to make the buttons more clickable */
+    display: inline-block;
+    text-align: center;
+    width: auto;
+    margin-bottom: 10px;
 }
 
+/* Button hover effect (static color) */
 button:hover {
     background-color: #45a049; /* Darker green for hover effect */
 }
 
+/* Button active state (static color) */
 button:active {
     background-color: #3e8e41; /* Even darker green for active state */
 }
+
+/* Styling for links inside buttons */
+button a {
+    color: rgb(0, 0, 0); /* White text for links inside buttons */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure the link takes up full button area */
+    width: 100%; /* Make the link span the full width of the button */
+    padding: 10px 0; /* Vertically center the text */
+    text-align: center;
+}
+
+/* Button for download with different styling (static color) */
+button a:active, button a:hover {
+    background-color: transparent; /* Remove the background color when hovering the link */
+    color: white; /* Keep white text when hovering */
+}
+
 
 /* Responsive styling */
 @media (max-width: 768px) {

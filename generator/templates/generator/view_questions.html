@@ -35,5 +35,8 @@
     <button>
         <a href="{% url 'edit_questions' csv_file_name=csv_file_name %}">Edit Questions</a>
     </button>
+    <button onclick="showDownloadPopup()">
+        <a href="{% url 'download_csv' csv_file_name %}" download>Download</a>
+    </button>
 </body>
 </html>
