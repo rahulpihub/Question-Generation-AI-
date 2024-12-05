@@ -17,32 +17,55 @@
     <!-- Display numbered boxes for each question -->
     <div class="question-box-container">
         {% for i in data %}
-            <div class="question-box">{{ forloop.counter }}</div>
+            <div class="question-box" data-index="{{ forloop.counter0 }}">{{ forloop.counter }}</div>
         {% endfor %}
     </div>
 
-    <!-- Table to display questions and answers -->
-    <table border="1">
-        <thead>
-            <tr>
-                {% for column in columns %}
-                    <th>{{ column }}</th>
-                {% endfor %}
-            </tr>
-        </thead>
-        <tbody>
-            {% for row in data %}
-                <tr>
-                    {% for cell in row %}
-                        <td>{{ cell }}</td>
-                    {% endfor %}
-                </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <br>
+    <!-- Section to display the selected question and answer -->
+    <div class="question-answer-display">
+        <h3 id="question-title">Click on a box to view the question and answer.</h3>
+        <p id="question-text"><strong>Question:</strong> <span id="question-content"></span></p>
+        <p id="answer-text"><strong>Answer:</strong> <span id="answer-content"></span></p>
+    </div>
 
     <!-- Back button -->
     <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">Go Back</a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const questionBoxes = document.querySelectorAll(".question-box");
+            const questionContent = document.getElementById("question-content");
+            const answerContent = document.getElementById("answer-content");
+            const questionTitle = document.getElementById("question-title");
+
+            questionBoxes.forEach(box => {
+                box.addEventListener("click", () => {
+                    const index = box.getAttribute("data-index");
+                    
+                    // Fetch the question and answer dynamically using AJAX
+                    fetch(`?index=${index}`, {
+                        headers: { "X-Requested-With": "XMLHttpRequest" }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            questionTitle.textContent = "Error";
+                            questionContent.textContent = data.error;
+                            answerContent.textContent = "";
+                        } else {
+                            questionTitle.textContent = `Question ${parseInt(index) + 1}`;
+                            questionContent.textContent = data.question;
+                            answerContent.textContent = data.answer;
+                        }
+                    })
+                    .catch(error => {
+                        questionTitle.textContent = "Error";
+                        questionContent.textContent = "Failed to load question.";
+                        answerContent.textContent = "";
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>

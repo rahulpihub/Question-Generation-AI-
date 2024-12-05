@@ -5,6 +5,9 @@ import google.generativeai as genai
 from django.conf import settings
 from django.http import HttpResponse
 from urllib.parse import quote
+from django.http import JsonResponse
+
+
 
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
@@ -52,7 +55,7 @@ def generate_questions(request):
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
                     f"for a {level} level audience. "
-                    f"Return the questions with the Questions : and its Answer : check the below format ensure that the question and answer generated in the below format only \n\n"
+                    f"Return the questions with the Questions : and its Answer : check the below format ensure that the question and answer generated in the below format only i dont want explanation in answer just need the true or flase as answer \n\n"
                     f"Question: <The generated question>\n"
                     f"Answer: <The correct answer>"
                 )
@@ -214,6 +217,7 @@ def edit_questions(request, csv_file_name):
 
 
 
+
 def use_questions(request, csv_file_name):
     try:
         # Get the file path
@@ -235,15 +239,23 @@ def use_questions(request, csv_file_name):
         question_index = columns.index("Question")
         answer_index = columns.index("Answer")
 
-        filtered_columns = ["Question", "Answer"]
         filtered_data = [[row[question_index], row[answer_index]] for row in data]
+
+        # If it's an AJAX request for a specific question
+        if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
+            question_index = int(request.GET.get('index', 0))
+            if 0 <= question_index < len(filtered_data):
+                return JsonResponse({
+                    "question": filtered_data[question_index][0],
+                    "answer": filtered_data[question_index][1]
+                })
+            return JsonResponse({"error": "Index out of range"}, status=400)
 
         # Count the number of questions
         question_count = len(filtered_data)
 
         # Pass the filtered data and question count to the template
         return render(request, "generator/use_questions.html", {
-            "columns": filtered_columns,
             "data": filtered_data,
             "csv_file_name": csv_file_name,
             "question_count": question_count,
