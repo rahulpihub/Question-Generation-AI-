@@ -140,3 +140,30 @@ def download_csv(request, file_name):
             return response
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
+
+
+
+def view_questions(request, csv_file_name):
+    try:
+        # Get the file path
+        file_path = os.path.join(settings.OUTPUT_DIR, csv_file_name)
+
+        if not os.path.exists(file_path):
+            return HttpResponse("File not found.", status=404)
+
+        # Read the CSV file
+        with open(file_path, mode="r", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            rows = list(reader)
+
+        # First row is the header
+        columns = rows[0]
+        data = rows[1:]
+
+        # Pass the data to the template
+        return render(request, "generator/view_questions.html", {
+            "columns": columns,
+            "data": data
+        })
+    except Exception as e:
+        return HttpResponse(f"Error: {str(e)}", status=500)

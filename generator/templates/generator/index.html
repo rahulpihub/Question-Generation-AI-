@@ -53,6 +53,9 @@
         <button onclick="showDownloadPopup()">
             <a href="{% url 'download_csv' csv_file_name %}" download>Download CSV</a>
         </button>
+        <button>
+            <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">View Questions</a>
+        </button>
     {% endif %}
 
     {% if questions %}
