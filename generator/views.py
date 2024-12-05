@@ -52,7 +52,7 @@ def generate_questions(request):
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
                     f"for a {level} level audience. "
-                    f"Return the questions in the format i dont any other unwanted information  ''' from the initial : \n\n"
+                    f"Return the questions with the Questions : and its Answer : check the below format ensure that the question and answer generated in the below format only \n\n"
                     f"Question: <The generated question>\n"
                     f"Answer: <The correct answer>"
                 )
@@ -110,8 +110,6 @@ def generate_questions(request):
                             answer_text = lines[1].replace("Answer: ", "").strip()
                             writer.writerow([topic, subtopic, level, question_type, question_text, answer_text])
                         else:
-                            if len(lines) < 3:
-                                continue  # Skip if options and answer are missing
                             options_text = lines[1].replace("Options: ", "").strip()
                             options = options_text.split(",")  # Split options by commas
                             options = options + [""] * (4 - len(options))  # Ensure we have 4 options
