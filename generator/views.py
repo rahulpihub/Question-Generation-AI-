@@ -211,3 +211,40 @@ def edit_questions(request, csv_file_name):
         })
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
+
+
+
+def use_questions(request, csv_file_name):
+    try:
+        # Get the file path
+        file_path = os.path.join(settings.OUTPUT_DIR, csv_file_name)
+
+        if not os.path.exists(file_path):
+            return HttpResponse("File not found.", status=404)
+
+        # Read the CSV file
+        with open(file_path, mode="r", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            rows = list(reader)
+
+        # Extract only "Question" and "Answer" columns
+        columns = rows[0]
+        data = rows[1:]
+
+        # Get indices of "Question" and "Answer"
+        question_index = columns.index("Question")
+        answer_index = columns.index("Answer")
+
+        filtered_columns = ["Question", "Answer"]
+        filtered_data = [[row[question_index], row[answer_index]] for row in data]
+
+        # Pass the filtered data to the template
+        return render(request, "generator/use_questions.html", {
+            "columns": filtered_columns,
+            "data": filtered_data,
+            "csv_file_name": csv_file_name
+        })
+    except ValueError:
+        return HttpResponse("The CSV file does not have 'Question' or 'Answer' columns.", status=400)
+    except Exception as e:
+        return HttpResponse(f"Error: {str(e)}", status=500)

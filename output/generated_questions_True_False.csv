@@ -1,39 +1,6 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-  ,data engineers,Intermediate,True/False,Databricks is primarily designed for data scientists and does not offer tools relevant to data engineers.,False
-databricks,data engineers,Intermediate,True/Fafsdflse,Delta Lake is a storage layefsdr that brings ACID properties to data lakes on Databricks.,True
-databricks,data engineers,Intermediatfsdfsdfsde,fsdTrue/False,Data engineers on Databricks can use Apache Spark for data transformation and processing.,True
-databricks,data engineers,Intermediate,True/False,Databricks supports only Python for data engineering tasks.,False
-databricks,data engineers,Interfsdmediate,True/Falsefsdfsd,"Databricks offers a fully managed cloud service, reducing infrastructure management overhead for data engineers.",True
-databricks,data engineers,Intermediate,True/Falsfsde,Data engineers can orchestrate workflows on Databricks using tools like Azure Data Factory or AWS Glue.,True
-databricks,data engineers,Indfsdfsdtermediate,True/Fasdfslse,Databricks does not provide any built-in tools for data quality management.,False
-databricks,data engineers,Intermediate,True/False,Data engineers can use Databricks notebooks for interactive data exploration and prototyping.,True
-databricks,data engineers,Intermediate,True/Falsdfsdfsdse,Auto Loader in Databricks simplifies incremental data ingestion from cloud storage.,True
-databricks,data engineers,Intermediate,True/Faldfsdfsse,Databricks Connect allows data engineers to connect their local development environments to Databricks clusters.,True
-databricks,data engineers,Intermediate,True/Falsdfsdfsdffdse,Databricks SQL is primarily intended for business analysts and not relevant for data engineers.,False
-databricks,data engineers,Intermediate,True/Falfsdfsdfse,Data engineers can utilize Databricks for building and deploying machine learning models.,True
-databricks,data engineers,Intermediate,True/Fasdfsdffslse,Databricks only supports batch processing and does not offer any streaming capabilities.,False
-databricks,data engineers,Intermediate,True/Falsfsdfe,Data engineers can leverage the Databricks Runtime for optimized performance of Spark workloads.,True
-databricks,data engineers,Intermediate,True/Falsdfsdfsdse,The Databricks workspace provides a collaborative environment for data engineers and data scientists.,True
-databricks,data engineers,Intermediate,True/Fasdfsdfdsfsdlse,Data engineers can’t schedule jobs on Databricks.,False
-databricks,data engineers,Intermediate,True/Fasdflse,"Databricks supports integration with various data sources like S3, Azure Blob Storage, and Google Cloud Storage.",True
-databricksqweqd,data engineers,Intermediate,True/Falsdfsdfsdfsdse,Databricks does not offer any security features for data governance.,False
-databricksdasdasda,data engineers,Intermediate,Truedfsdfsf/False,Data engineers can use the Databricks CLI for automating tasks and managing resources.,True
-databrickssadasdasdd,data engineers,Intermediate,True/False,Databricks doesn’t support infrastructure as code tools like Terraform.,False
-databricks,data engineers,Intermediate,True/Falssfe,Data engineers can build data pipelines using Delta Live Tables (DLT).,True
-databricks,data engineefsdfsdffsdfrs,Intermediate,True/False,Databricks offers a serverless SQL option for querying data lakes.,True
-databricks,data engineers,Intermediate,True/False,Data engineers can’t use Databricks for real-time data ingestion and processing.,False
-databricks,data engineers,Intermediate,Trusdfe/Falfsfse,Databricks integrates with Git for version control of code and notebooks.,True
-databricks,data engineers,Intesfsfrmediate,True/False,"Databricks offers a Community Edition, which is a free version with limited capabilities.",True
-databricksasdaasdsa,data engineers,Intermediate,True/False,Data Factory pipelines cannot interact with Databricks clusters.,False
-databricks,data engineers,Intermediate,True/False,Databricks Runtime includes pre-configured libraries for common data engineering tasks.,True
-databricks,data engineers,Intermediate,True/False,Data engineers don't need to worry about cluster management when using serverless SQL in Databricks.,True
-databricks,data engineers,Intermediate,True/False,Unity Catalog provides a centralized governance solution for data and AI assets in Databricks.,True
-databricks,data engineers,Intermediate,True/False,Databricks does not support CI/CD pipelines for data engineering workflows.,False
-databricksasdasdasd,data engineers,Intermediate,True/False,Data engineers can use Databricks for building and managing data warehouses.,True
-databricks,data engineers,Intermediate,True/False,Structured Streaming in Databricks allows for processing real-time data streams.,True
-databricks,data engineers,Intermediate,True/False,Data bricks only supports SQL and Python.,"False (Supports other languages like Scala, R, and Java)"
-databricks,data engineers,Intermediate,True/False,Delta Sharing allows secure data sharing with external organizations.,True
-databricks,data engineers,Intermediate,True/False,Databricks Repos allows data engineers to develop and manage code in a collaborative environment.,True
-databricasdadks,data engineers,Intermediate,Rahul,Secret management is not available within the Databricks platform.,False
-databricksasdasdasdad,data engineers,Intermediate,Rahul,Data engineers cannot monitor the performance of their Spark jobs in Databricks.,False
-daadasdtabricks,data engineers,Intermediate,Rahul,Databricks supports integration with BI tools like Tableau and Power BI.,True
+databricks,data engineers,Advanced,True/False,"Delta Live Tables (DLT) in Databricks automatically handle schema evolution and enforcement, eliminating the need for data engineers to manually manage schema changes in production pipelines.",True
+databricks,data engineers,Advanced,True/False,"Databricks SQL allows data engineers to define and orchestrate complex data pipelines using only SQL, without requiring knowledge of Python or other programming languages. While helpful for many tasks, this completely eliminates the need for tools like Apache Spark for complex transformations.",False
+databricks,data engineers,Advanced,True/False,"Data engineers using Databricks can leverage the built-in integration with MLflow to track and manage machine learning experiments, including model versioning, parameter logging, and artifact storage, even if they are not directly involved in model development.",True
+databricks,data engineers,Advanced,True/False,"Databricks's auto-scaling capabilities dynamically adjust the compute resources based on workload demands, meaning data engineers never have to configure cluster sizes or worry about resource allocation for optimal performance.",False 
+databricks,data engineers,Advanced,True/False,"Using Databricks Connect, data engineers can connect their preferred IDE (like IntelliJ or VS Code) directly to Databricks clusters, enabling local development and debugging of Spark code against a remote Databricks environment without impacting production workloads.",True

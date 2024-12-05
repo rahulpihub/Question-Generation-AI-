@@ -1,6 +1,14 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Intermediate,Fill Ups,"Databricks utilizes __________ as its distributed computing framework, enabling data engineers to process massive datasets efficiently.",Apache Spark
-databricks,data engineers,Intermediate,Fill Ups,Data engineers use __________ to orchestrate and manage complex data pipelines within the Databricks environment.,Databricks Workflows
-databricks,data engineers,Intermediate,Fill Ups,"For interactive data exploration and visualization, Databricks provides __________, allowing data engineers to analyze data using familiar tools like Python, R, and SQL.",Databricks Notebooks
-databricks,data engineers,Intermediate,Fill Ups,"Databricks' __________ facilitates the creation and management of clusters, providing data engineers with control over the resources allocated for their data processing tasks.",Cluster Manager
-databricks,data engineers,Intermediate,Fill Ups,"To ensure data quality and consistency, data engineers often leverage Databricks' support for __________, which allows them to define schemas and enforce data validation rules.",Delta Lake
+databricks,data engineers,Beginner,Fill Ups,Databricks is a data and AI platform built on top of __________.,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,"Data Engineers on Databricks primarily use languages like Python, SQL, and __________.",Scala
+databricks,data engineers,Beginner,Fill Ups,"Databricks notebooks allow Data Engineers to write and execute code in different languages, visualize data, and __________.",collaborate with others
+databricks,data engineers,Beginner,,"Databricks __________ allow Data Engineers to organize their code, data, and other resources in a structured manner.",Workspaces
+databricks,data engineers,Beginner,Fill Ups,"__________ are interactive computing environments on Databricks that Data Engineers use for data exploration, transformation, and analysis.",Notebooks
+databricks,data engineers,Beginner,Fill Ups,Delta Lake is an open-source storage layer that brings __________ to data lakes on Databricks.,reliability
+databricks,data engineers,Beginner,Fill Ups,"Databricks offers __________ clusters, allowing Data Engineers to easily scale their computing resources based on their needs.",autoscaling
+databricks,data engineers,Beginner,Fill Ups,Data Engineers use Databricks to build and deploy __________ pipelines.,data
+databricks,data engineers,Beginner,Fill Ups,"Databricks integrates with various data sources, such as cloud storage, databases, and __________.",streaming platforms
+databricks,data engineers,Beginner,Fill Ups,Data Engineers can schedule and automate their Databricks jobs using the __________ feature.,jobs scheduler
+databricks,data engineers,Beginner,Fill Ups,"Databricks provides a unified platform for Data Engineers, Data Scientists, and __________ to collaborate and work with data.",Data Analysts
+databricks,data engineers,Beginner,Fill Ups,__________ is a collaborative workspace that allows Data Engineers to share notebooks and other resources with their team.,Databricks Repos
+databricks,data engineers,Beginner,Fill Ups,Data Engineers can monitor and manage their Databricks clusters through the __________ interface.,cluster management

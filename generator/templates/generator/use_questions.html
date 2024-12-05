@@ -5,11 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'generator/view_questions.css' %}">
-    <title>View Generated Questions</title>
+    <link rel="stylesheet" href="{% static 'generator/use_questions.css' %}">
+    <title>Use Questions</title>
 </head>
 <body>
-    <h1>View Generated Questions</h1>
+    <h1>Use Questions</h1>
     <table border="1">
         <thead>
             <tr>
@@ -29,18 +29,6 @@
         </tbody>
     </table>
     <br>
-    <a href="{% url 'generate_questions' %}">Go Back</a>
-    <br><br>
-
-    <button>
-        <a href="{% url 'use_questions' csv_file_name=csv_file_name %}">Use Questions</a>
-    </button>
-
-    <button>
-        <a href="{% url 'edit_questions' csv_file_name=csv_file_name %}">Edit Questions</a>
-    </button>
-    <button>
-        <a href="{% url 'download_csv' csv_file_name %}" download>Download CSV</a>
-    </button>
+    <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">Go Back</a>
 </body>
 </html>
