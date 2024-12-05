@@ -1,39 +1,6 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Beginner,Fill Ups,Databricks is a unified analytics platform built around __________.,Apache Spark
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use Databricks to build and deploy __________ data pipelines.,scalable
-databricks,data engineers,Beginner,Fill Ups,"Databricks supports multiple programming languages like Python, Scala, SQL, and __________.",R
-databricks,data engineers,Beginner,Fill Ups,Databricks offers __________  to manage and process large datasets.,clusters
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use __________ to write and execute code in Databricks.,notebooks
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ allows for collaborative data analysis and exploration.,notebooks
-databricks,data engineers,Beginner,Fill Ups,__________ are reusable pieces of code in Databricks.,Functions
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ are a collection of notebooks and other files.,workspaces
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use __________ to orchestrate data pipelines in Databricks.,workflows
-databricks,data engineers,Beginner,Fill Ups,__________ is a popular scheduling tool integrated with Databricks.,Airflow
-databricks,data engineers,Beginner,Fill Ups,"Databricks supports various data sources like files, databases, and __________.",streaming data
-databricks,data engineers,Beginner,Fill Ups,__________ is Databricks's cloud-based file storage.,DBFS (Databricks File System)
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use __________ to query data in Databricks.,Spark SQL
-databricks,data engineers,Beginner,Fill Ups,Databricks offers __________ for interactive data exploration and visualization.,dashboards
-databricks,data engineers,Beginner,Fill Ups,__________ allows Data Engineers to visualize data transformations in Databricks.,Data Lineage
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ provides serverless compute for data engineering tasks.,SQL Warehouses
-databricks,data engineers,Beginner,Fill Ups,__________ in Databricks are used for job scheduling and automation.,Jobs
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use the __________ API to interact with Databricks programmatically.,REST
-databricks,data engineers,Beginner,Fill Ups,Delta Lake is an __________ storage layer that brings reliability to data lakes.,open-source
-databricks,data engineers,Beginner,Fill Ups,Databricks integrates with __________ for data warehousing.,Delta Lake
-databricks,data engineers,Beginner,Fill Ups,Data Engineers can use __________ to perform ETL operations within Databricks.,Spark
-databricks,data engineers,Beginner,Fill Ups,__________ helps to manage and govern data access in Databricks.,Unity Catalog
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ enables real-time data processing.,Structured Streaming
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use Databricks to build __________ learning models.,machine
-databricks,data engineers,Beginner,Fill Ups,Databricks integrates with __________ for machine learning workflows.,MLflow
-databricks,data engineers,Beginner,Fill Ups,__________ in Databricks provide pre-configured environments for specific tasks.,Runtimes
-databricks,data engineers,Beginner,Fill Ups,Data Engineers use __________ for data quality monitoring and enforcement in Databricks.,Delta Live Tables
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ allows for cost optimization and resource management.,cluster policies
-databricks,data engineers,Beginner,Fill Ups,"Data Engineers use Databricks to ingest data from various sources, including __________.",Kafka
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ provides a serverless option for data ingestion.,Auto Loader
-databricks,data engineers,Beginner,Fill Ups,__________ are used to transform data in Databricks pipelines.,Spark Transformations
-databricks,data engineers,Beginner,Fill Ups,Databricks supports __________ for data visualization.,built-in visualizations and integrations with other tools like Tableau and Power BI
-databricks,data engineers,Beginner,Fill Ups,__________ are essential for monitoring and troubleshooting Databricks jobs.,Logs
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ provide a way to track job execution and resource utilization.,metrics
-databricks,data engineers,Beginner,Fill Ups,Data engineers often use __________ to deploy their code changes to Databricks.,Git integration
-databricks,data engineers,Beginner,Fill Ups,Databricks __________ allow users to share insights and collaborate on projects.,Repos
-databricks,data engineers,Beginner,Fill Ups,,Question: Data engineers use Databricks to build data __________.
-databricks,data engineers,Beginner,Fill Ups,,"Question: Databricks supports various data formats, including __________."
+databricks,data engineers,Beginner,Fill Ups,Databricks is a data and AI platform built on top of _______.,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,Data engineers on Databricks commonly use _______ notebooks for data transformation and analysis.,Databricks
+databricks,data engineers,Beginner,Fill Ups,"Delta Lake, developed by Databricks, is an open-source storage layer that brings _______ to data lakes.","reliability, ACID transactions (either is acceptable)"
+databricks,data engineers,Beginner,Fill Ups,"Databricks offers a unified platform for data engineering, data science, and _______.",machine learning
+databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build and manage _______ pipelines.,data

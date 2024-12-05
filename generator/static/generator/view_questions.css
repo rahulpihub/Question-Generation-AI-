@@ -29,12 +29,14 @@ table {
     max-width: 1200px;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border: 1px solid #ddd; /* Added border to the table */
 }
 
 th, td {
     padding: 12px 15px;
     text-align: center;
     font-size: 1em;
+    border: 1px solid #ddd; /* Added border to table cells */
 }
 
 th {
