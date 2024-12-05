@@ -1,6 +1,2 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Beginner,Fill Ups,Databricks is a data and AI platform built on top of _______.,Apache Spark
-databricks,data engineers,Beginner,Fill Ups,Data engineers on Databricks commonly use _______ notebooks for data transformation and analysis.,Databricks
-databricks,data engineers,Beginner,Fill Ups,"Delta Lake, developed by Databricks, is an open-source storage layer that brings _______ to data lakes.","reliability, ACID transactions (either is acceptable)"
-databricks,data engineers,Beginner,Fill Ups,"Databricks offers a unified platform for data engineering, data science, and _______.",machine learning
-databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build and manage _______ pipelines.,data
+databricks,Rahul,Beginner,Fill Ups,Databricks is a popular platform for data engineers to build and deploy ______.,data pipelines

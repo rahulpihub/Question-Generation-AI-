@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'generator/styles.css' %}">
+    <title>Edit Questions</title>
+</head>
+<body>
+    <h1>Edit Questions</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <table border="1">
+            <thead>
+                <tr>
+                    {% for column in columns %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                    <tr>
+                        <td>{{ row.0 }}</td>
+                        <td>
+                            <textarea name="question" rows="3" cols="50">{{ row.1 }}</textarea>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+    <br>
+    <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">Go Back</a>
+</body>
+</html>

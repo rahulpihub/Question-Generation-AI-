@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render ,redirect
 import csv
 import os
 import google.generativeai as genai
@@ -8,7 +8,7 @@ from urllib.parse import quote
 
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
-api_key = "AIzaSyDBrlXjAV-LLGc4AWqE8thsmhJioqCLK9E"  # Ensure this API key is secure
+api_key = "AIzaSyCx7HuBbuBeExZz0hssMfwWCW-F7u8I46Y"  # Ensure this API key is secure
 genai.configure(api_key=api_key)
 
 # Set the output directory for CSV
@@ -141,7 +141,9 @@ def download_csv(request, file_name):
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
 
-#View_Question Code
+
+
+
 def view_questions(request, csv_file_name):
     try:
         # Get the file path
@@ -162,7 +164,47 @@ def view_questions(request, csv_file_name):
         # Pass the data to the template
         return render(request, "generator/view_questions.html", {
             "columns": columns,
-            "data": data
+            "data": data,
+            "csv_file_name": csv_file_name
         })
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
+
+def edit_questions(request, csv_file_name):
+    try:
+        file_path = os.path.join(settings.OUTPUT_DIR, csv_file_name)
+
+        if not os.path.exists(file_path):
+            return HttpResponse("File not found.", status=404)
+
+        # Read the CSV file
+        with open(file_path, mode="r", encoding="utf-8") as file:
+            reader = csv.reader(file)
+            rows = list(reader)
+
+        columns = rows[0]
+        data = rows[1:]
+
+        if request.method == "POST":
+            # Update CSV data from POST request
+            updated_data = request.POST.getlist("question")
+            for i, row in enumerate(data):
+                if i < len(updated_data):  # Ensure we don't run out of updated data
+                    row[1] = updated_data[i]  # Update the second column with new values
+
+            # Save updated data back to CSV
+            with open(file_path, mode="w", newline='', encoding="utf-8") as file:
+                writer = csv.writer(file)
+                writer.writerow(columns)
+                writer.writerows(data)
+
+            return redirect('view_questions', csv_file_name=csv_file_name)
+
+        return render(request, "generator/edit_questions.html", {
+            "columns": columns,
+            "data": data,
+            "csv_file_name": csv_file_name
+        })
+    except Exception as e:
+        return HttpResponse(f"Error: {str(e)}", status=500)
+

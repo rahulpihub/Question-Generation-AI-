@@ -1,6 +1,11 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Beginner,True/False,Databricks is primarily designed for data scientists and doesn't offer tools relevant to data engineers.,False
-databricks,data engineers,Beginner,True/False,Data engineers on Databricks can use notebooks to orchestrate data pipelines using languages like Python and SQL.,True
-databricks,data engineers,Beginner,True/False,"Delta Lake, an open-source storage layer, is unavailable for use within the Databricks environment by data engineers.",False
-databricks,data engineers,Beginner,True/False,Data engineers working on Databricks typically don't interact with cloud storage services like AWS S3 or Azure Blob Storage.,False
-databricks,data engineers,Beginner,True/False,Databricks offers no built-in tools for scheduling and automating data engineering tasks.,False
+databricks,data engineers,Beginner,True/False,Databricks is a cloud-based platform specifically designed for data engineers.,True
+databricks,data engineers,Beginner,True/False,Data engineers primarily use Databricks for data visualization and reporting.,False
+databricks,data engineers,Beginner,True/False,"Databricks supports multiple programming languages like Python, SQL, Scala, and R, making it versatile for data engineers.",True
+databricks,data engineers,Beginner,True/False,Data engineers do not need any coding skills to work with Databricks.,False
+databricks,data engineers,Beginner,True/False,"Apache Spark is the underlying processing engine used by Databricks, which is essential knowledge for data engineers.",True
+databricks,data engineers,Beginner,True/False,Databricks is only useful for processing small datasets.,False
+databricks,data engineers,Beginner,True/False,Data engineers working with Databricks often use Delta Lake for reliable data storage and management.,True
+databricks,data engineers,Beginner,True/False,Databricks notebooks are unsuitable for collaborative data engineering tasks.,False
+databricks,data engineers,Beginner,True/False,Data engineers can use Databricks to build and orchestrate data pipelines.,True
+databricks,data engineers,Beginner,True/False,,Question: Databricks is a free and open-source platform.
