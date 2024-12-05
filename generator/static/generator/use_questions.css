@@ -20,31 +20,43 @@ p {
     text-align: center;
 }
 
+
 /* Question box container */
 .question-box-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: 15px;  /* Increase gap for more breathing space */
+    margin-bottom: 30px;  /* Increased margin for separation */
+    padding: 10px;
 }
 
 /* Individual question box */
 .question-box {
     display: inline-block;
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
+    width: 20px;  /* A fixed width for consistency */
+    padding: 20px;  /* Add padding inside the box for a spacious feel */
+    border: 2px solid #4CAF50;  /* Blue border for a modern look */
+    background-color: #f8f9fa;  /* Light background for a clean appearance */
     cursor: pointer;
     text-align: center;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease;
-    font-size: 1.1em;
+    border-radius: 12px;  /* Rounded corners for a more contemporary look */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Smooth hover effect */
+    font-size: 1.2em;
     font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Soft shadow for a lifted look */
 }
 
 .question-box:hover {
-    background-color: #d0d0d0;
+    background-color: #e1f5fe;  /* Light blue background when hovered */
+    transform: translateY(-5px);  /* Slightly lift the box for hover effect */
+}
+
+/* Optional: Focus effect when the box is clicked */
+.question-box:focus {
+    outline: none;
+    border-color: #4CAF50;  /* Darker blue for focus state */
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);  /* Focus ring effect */
 }
 
 /* Styling for the question-answer display section */
@@ -64,6 +76,8 @@ p {
 }
 
 .question-answer-display p {
+    text-align: left; /* Align text to the left */
+    margin: 20px; /* Add some margin for spacing */
     font-size: 1.1em;
     margin-top: 10px;
     line-height: 1.5;
