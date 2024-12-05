@@ -1,7 +1,7 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Beginner,Fill Ups,Databricks is a unified _____ platform.,data analytics
-databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build and manage _____ pipelines.,data
-databricks,data engineers,Beginner,Fill Ups,Databricks is built on top of _____.,Apache Spark
+databricks,data engineers,,Fill Ups,,data analytics
+databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build and manage _____ pipelines.,
+databricks,data engineers,Beginner,Fill Ups,,
 databricks,data engineers,Beginner,Fill Ups,_____ is the programming language commonly used with Databricks.,"Python (or Scala, SQL, R)"
 databricks,data engineers,Beginner,Fill Ups,Databricks allows data engineers to process _____ datasets.,large
 databricks,data engineers,Beginner,Fill Ups,_____ are interactive coding environments in Databricks.,Notebooks

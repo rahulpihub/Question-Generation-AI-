@@ -73,3 +73,27 @@ a {
     width: fit-content;
     margin: 20px auto;
 }
+
+.question-box-container {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.question-box:hover {
+    background-color: #cfcfcf;
+    cursor: pointer;
+}
