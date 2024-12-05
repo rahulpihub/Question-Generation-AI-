@@ -1,14 +1,6 @@
-Topic,Subtopic,Level,Question Type,Question,Option 1,Option 2,Option 3,Option 4,Answer
-databricks,data engineers,Beginner,Multiple Choice,What is the primary cloud-based platform Databricks is built upon?,AWS, Azure, GCP, All of the above,All of the above
-databricks,data engineers,Beginner,Multiple Choice,What open-source project is Databricks founded on?,Apache Spark, Hadoop, Kubernetes, TensorFlow,Apache Spark
-databricks,data engineers,Beginner,Multiple Choice,Which language is commonly used by data engineers on Databricks for data manipulation?,Python, SQL, Scala, R,Python
-databricks,data engineers,Beginner,Multiple Choice,What are Databricks Notebooks primarily used for?,Data exploration and transformation, Workflow orchestration, Machine learning model training, All of the above,All of the above
-databricks,data engineers,Beginner,Multiple Choice,What is a Databricks Cluster?,A group of virtual machines for computation, A single powerful server, A data storage location, A type of database,A group of virtual machines for computation
-databricks,data engineers,Beginner,Multiple Choice,What is Delta Lake?,A storage layer that brings reliability to data lakes, A type of data warehouse, A data visualization tool, A machine learning library,A storage layer that brings reliability to data lakes
-databricks,data engineers,Beginner,Multiple Choice,What is a common use case for Databricks in data engineering?,ETL processes, Building data pipelines, Data warehousing, All of the above,All of the above
-databricks,data engineers,Beginner,Multiple Choice,What does Databricks offer for workflow orchestration?,Databricks Workflows, Airflow integration, Both Databricks Workflows and Airflow integration, Cron jobs,Both Databricks Workflows and Airflow integration
-databricks,data engineers,Beginner,Multiple Choice,How can data engineers interact with Databricks?,Web UI, CLI, APIs, All of the above,All of the above
-databricks,data engineers,Beginner,Multiple Choice,What file format is commonly used with Databricks for large datasets?,Parquet, CSV, JSON, TXT,Parquet
-databricks,data engineers,Beginner,Multiple Choice,,Question: What service does Databricks provide for collaborative data science and engineering?,,,,"Options: Databricks Workspace, Databricks Clusters, Delta Lake, MLflow"
-databricks,data engineers,Beginner,Multiple Choice,,Question: What is the advantage of using Databricks for Spark compared to standalone Spark?,,,,"Options: Managed infrastructure, Easier setup and configuration, Scalability, All of the above"
-databricks,data engineers,Beginner,Multiple Choice,,Question: What is a key benefit of using Delta Lake within Databricks?,,,,"Options: ACID transactions, Data versioning, Schema enforcement, All of the above"
+Question,Option 1,Option 2,Option 3,Option 4,Answer
+Which of these is a common task for a Data Engineer using Databricks?,Building data pipelines, Visualizing data with dashboards, Creating machine learning models, Managing server infrastructure,Building data pipelines
+What language is commonly used by Data Engineers to interact with Databricks?,SQL, Java, Python, R,Python
+What is a Databricks Notebook primarily used for?,Storing large datasets, Running and sharing code, Managing cluster resources, Scheduling ETL jobs,Running and sharing code
+Which Databricks component allows Data Engineers to process large datasets in parallel?,Delta Lake, Apache Spark, MLflow, Databricks SQL,Apache Spark
+What file format is optimized for storing data on Databricks and provides features like ACID transactions and schema enforcement?,CSV, Parquet, JSON, Delta Lake,Delta Lake

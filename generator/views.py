@@ -168,8 +168,7 @@ def view_questions(request, csv_file_name):
         })
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
-
-
+    
 def edit_questions(request, csv_file_name):
     try:
         file_path = os.path.join(settings.OUTPUT_DIR, csv_file_name)
@@ -182,37 +181,60 @@ def edit_questions(request, csv_file_name):
             reader = csv.reader(file)
             rows = list(reader)
 
+        # Define the columns we expect to see
+        expected_columns = ["Question", "Option 1", "Option 2", "Option 3", "Option 4", "Answer"]
+
+        # The first row contains column names
         columns = rows[0]
+
+        # Filter out columns that are not in the expected ones
+        filtered_columns = [col for col in expected_columns if col in columns]
+
+        # Data is the remaining rows
         data = rows[1:]
+
+        # Map the rows to the filtered columns and calculate the indexes
+        mapped_data = []
+        for i, row in enumerate(data):
+            mapped_row = []
+            for j, col in enumerate(filtered_columns):
+                # Add the row and column index
+                mapped_row.append({
+                    'value': row[columns.index(col)] if col in columns else '',
+                    'row_index': i + 1,
+                    'col_index': j + 1
+                })
+            mapped_data.append(mapped_row)
 
         if request.method == "POST":
             # Process updated CSV data from the POST request
             updated_data = []
-            for i, row in enumerate(data):
+            for i, row in enumerate(mapped_data):
                 updated_row = []
                 for j, cell in enumerate(row):
                     # Get the updated value for each cell
-                    updated_value = request.POST.get(f"cell_{i+1}_{j+1}")
+                    updated_value = request.POST.get(f"cell_{cell['row_index']}_{cell['col_index']}")
                     # If the value is empty, retain the original cell value
-                    updated_row.append(updated_value if updated_value is not None else cell)
+                    updated_row.append(updated_value if updated_value else cell['value'])
                 updated_data.append(updated_row)
 
             # Save updated data back to the CSV
             with open(file_path, mode="w", newline='', encoding="utf-8") as file:
                 writer = csv.writer(file)
-                writer.writerow(columns)
+                # Write only the filtered columns
+                writer.writerow(filtered_columns)
                 writer.writerows(updated_data)
 
             return redirect('view_questions', csv_file_name=csv_file_name)
 
         return render(request, "generator/edit_questions.html", {
-            "columns": columns,
-            "data": data,
+            "columns": filtered_columns,
+            "data": mapped_data,
             "csv_file_name": csv_file_name
         })
+
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
-
 
 def use_questions(request, csv_file_name):
     try:

@@ -1,11 +1,33 @@
 Topic,Subtopic,Level,Question Type,Question,Answer
-databricks,data engineers,Advanced,True/False,"Databricks SQL allows data engineers to directly query data lakes using familiar SQL syntax, eliminating the need for complex ETL processes in all scenarios.",False
-databricks,data engineers,Advanced,True/False,"Delta Live Tables (DLT) in Databricks automatically handle schema enforcement, data quality checks, and CDC (Change Data Capture), significantly reducing the manual effort required from data engineers.",True
+databricks,data engineers,Advanced,True/False,Databricks offers a fully managed Delta Lake service.,True
+databricks,data engineers,Advanced,True/False,Data Engineers primarily use Databricks SQL for ETL workloads.,False
 databricks,data engineers,Advanced,True/False,Databricks supports only Python for data engineering tasks.,False
-databricks,data engineers,Advanced,True/False,"Data engineers can use Databricks' integrated MLflow to track and manage the lifecycle of machine learning models, including model versioning and deployment.",True
-databricks,data engineers,Advanced,True/False,Databricks Connect allows data engineers to connect their preferred IDEs (like IntelliJ or VS Code) to Databricks clusters for local development and testing.,True
-databricks,data engineers,Advanced,True/False,"Data engineers can leverage Databricks' auto-scaling capabilities to dynamically adjust cluster resources based on workload demands, optimizing cost and performance.",True
-databricks,data engineers,Advanced,True/False,"Databricks Repos utilizes Git integration, allowing data engineers to collaborate on code and manage versions effectively within the Databricks platform.",True
-databricks,data engineers,Advanced,True/False,"Data engineers working in Databricks exclusively interact with data through notebooks, preventing the use of command-line tools.",False
-databricks,data engineers,Advanced,True/False,"Databricks Unity Catalog provides a centralized governance solution for data and AI assets, enabling data engineers to manage access control and data discovery across the Databricks workspace.",True
-databricks,data engineers,Advanced,True/False,"The performance of Databricks clusters is entirely independent of the underlying cloud infrastructure provider (AWS, Azure, GCP).",False
+databricks,data engineers,Advanced,True/False,Data Engineers can leverage AutoML capabilities in Databricks for feature engineering.,True
+databricks,data engineers,Advanced,True/False,Delta Live Tables automatically handle data quality and testing.,True
+databricks,data engineers,Advanced,True/False,Databricks integrates with popular CI/CD tools.,True
+databricks,data engineers,Advanced,True/False,Data Engineers cannot access data stored in cloud storage directly from Databricks.,False
+databricks,data engineers,Advanced,True/False,Databricks doesn't support streaming data ingestion.,False
+databricks,data engineers,Advanced,True/False,Structured Streaming in Databricks is built upon Apache Spark Structured Streaming.,True
+databricks,data engineers,Advanced,True/False,Databricks allows for the creation of custom libraries and packages.,True
+databricks,data engineers,Advanced,True/False,Data Engineers can use Databricks notebooks for collaborative code development.,True
+databricks,data engineers,Advanced,True/False,Databricks supports only batch processing.,False
+databricks,data engineers,Advanced,True/False,Databricks offers serverless compute options for data engineering workloads.,True
+databricks,data engineers,Advanced,True/False,Delta Lake is a proprietary storage format exclusive to Databricks.,False
+databricks,data engineers,Advanced,True/False,Data Engineers can use the Databricks CLI for automation.,True
+databricks,data engineers,Advanced,True/False,Databricks doesn't offer any built-in security features.,False
+databricks,data engineers,Advanced,True/False,Data masking and anonymization are not possible within Databricks.,False
+databricks,data engineers,Advanced,True/False,Databricks supports integration with Git for version control.,True
+databricks,data engineers,Advanced,True/False,Data Engineers can define and manage data pipelines using Databricks workflows.,True
+databricks,data engineers,Advanced,True/False,Databricks provides tools for monitoring and profiling data pipelines.,True
+databricks,data engineers,Advanced,True/False,Data lineage tracking is not supported within Databricks.,False
+databricks,data engineers,Advanced,True/False,Data Engineers can schedule jobs in Databricks using cron syntax.,True
+databricks,data engineers,Advanced,True/False,Databricks only supports interactive data exploration.,False
+databricks,data engineers,Advanced,True/False,Unity Catalog is a data governance solution in Databricks.,True
+databricks,data engineers,Advanced,True/False,Data Engineers can use the Databricks Terraform provider for infrastructure as code.,True
+databricks,data engineers,Advanced,True/False,Databricks offers no support for machine learning operations (MLOps).,False
+databricks,data engineers,Advanced,True/False,Delta Sharing enables secure data sharing across organizations.,True
+databricks,data engineers,Advanced,True/False,Data Engineers can build and deploy custom containerized applications on Databricks.,True
+databricks,data engineers,Advanced,True/False,Databricks doesn't integrate with any BI tools.,False
+databricks,data engineers,Advanced,True/False,Access control lists (ACLs) can be used for fine-grained data access control in Databricks.,True
+databricks,data engineers,Advanced,True/False,SCIM (System for Cross-domain Identity Management) integration is available in Databricks.,True
+databricks,data engineers,Advanced,True/False,Databricks only supports a single cloud provider.,False
