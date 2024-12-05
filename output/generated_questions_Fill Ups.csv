@@ -1,0 +1,39 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Beginner,Fill Ups,Databricks is a unified analytics platform built around __________.,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,Data engineers on Databricks use __________ to build and manage data pipelines.,notebooks
+databricks,data engineers,Beginner,Fill Ups,Databricks offers a collaborative environment where data engineers can share __________ and collaborate on projects.,notebooks
+databricks,data engineers,Beginner,Fill Ups,__________ is the primary programming language used by data engineers on Databricks.,"Python (or Scala, SQL, R)"
+databricks,data engineers,Beginner,Fill Ups,Databricks provides __________ for interactive data exploration and visualization.,dashboards
+databricks,data engineers,Beginner,Fill Ups,__________ are reusable components in Databricks that help streamline data engineering tasks.,libraries
+databricks,data engineers,Beginner,Fill Ups,"Databricks supports various data sources, including __________.","cloud storage, databases, streaming platforms"
+databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build __________ that transform and process data.,ETL pipelines
+databricks,data engineers,Beginner,Fill Ups,__________ is a feature in Databricks that allows for scheduled execution of notebooks.,jobs
+databricks,data engineers,Beginner,Fill Ups,Databricks integrates with __________ for version control and collaboration.,Git
+databricks,data engineers,Beginner,Fill Ups,The __________ environment in Databricks allows data engineers to experiment and test code without affecting production data.,development
+databricks,data engineers,Beginner,Fill Ups,Databricks offers __________ capabilities for managing and accessing data in a secure and controlled manner.,data governance
+databricks,data engineers,Beginner,Fill Ups,Data engineers use __________ to query and analyze data in Databricks.,SQL
+databricks,data engineers,Beginner,Fill Ups,__________ is a tool within Databricks for visualizing data pipelines.,DAG visualization
+databricks,data engineers,Beginner,Fill Ups,__________ is a key concept in Databricks that allows for distributed processing of large datasets.,parallelism
+databricks,data engineers,Beginner,Fill Ups,Databricks provides __________ features for monitoring and managing the performance of data pipelines.,performance monitoring
+databricks,data engineers,Beginner,Fill Ups,Data engineers can use __________ to automate tasks and manage infrastructure on Databricks.,APIs
+databricks,data engineers,Beginner,Fill Ups,Databricks Runtime is optimized for __________.,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,Delta Lake is a __________ storage layer that brings reliability to data lakes.,transactional
+databricks,data engineers,Beginner,Fill Ups,Data engineers can use __________ to define and enforce data quality rules in Databricks.,Delta Lake expectations
+databricks,data engineers,Beginner,Fill Ups,__________ allows for efficient upserts and deletes in Delta Lake.,ACID transactions
+databricks,data engineers,Beginner,Fill Ups,Databricks supports __________ streaming for real-time data ingestion and processing.,structured
+databricks,data engineers,Beginner,Fill Ups,__________ are used for data transformation and aggregation in Spark.,DataFrames
+databricks,data engineers,Beginner,Fill Ups,__________ is a component of Databricks that allows for interactive data analysis using SQL.,Databricks SQL
+databricks,data engineers,Beginner,Fill Ups,Databricks provides integrations with various __________ tools for data visualization.,BI
+databricks,data engineers,Beginner,Fill Ups,Data engineers can use Databricks to build and deploy __________ learning models.,machine
+databricks,data engineers,Beginner,Fill Ups,__________ is a feature in Databricks that allows for automated scaling of compute resources.,autoscaling
+databricks,data engineers,Beginner,Fill Ups,Databricks offers different __________ for various workload needs and budgets.,cluster types
+databricks,data engineers,Beginner,Fill Ups,__________ is a fully managed cloud service that makes it easy to deploy and manage Databricks.,Databricks workspace
+databricks,data engineers,Beginner,Fill Ups,Data engineers can use the __________ CLI to interact with Databricks programmatically.,Databricks CLI
+databricks,data engineers,Beginner,Fill Ups,Databricks supports integration with popular __________ tools like Terraform.,Infrastructure-as-Code (IaC)
+databricks,data engineers,Beginner,Fill Ups,Databricks provides __________ features for secure access and data protection.,security
+databricks,data engineers,Beginner,Fill Ups,Data engineers can use __________ to track and manage data lineage in Databricks.,Unity Catalog
+databricks,data engineers,Beginner,Fill Ups,Databricks supports __________ for managing secrets and credentials.,secrets management
+databricks,data engineers,Beginner,Fill Ups,__________ allows for fine-grained access control to data and resources in Databricks.,access control lists (ACLs)
+databricks,data engineers,Beginner,Fill Ups,Databricks offers various __________ options for connecting to different data sources.,connectors
+databricks,data engineers,Beginner,Fill Ups,Data engineers use Databricks to build __________ data pipelines for efficient data processing.,scalable
+databricks,data engineers,Beginner,Fill Ups,Databricks provides a __________ environment for data engineers to collaborate and build data solutions.,collaborative

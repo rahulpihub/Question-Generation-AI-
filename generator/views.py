@@ -42,7 +42,7 @@ def generate_questions(request):
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
                     f"for a {level} level audience. "
-                    f"Return the questions in the format: \n\n"
+                    f"Return the questions in the format i dont any other unwanted informationlike ''' from the initial : \n\n"
                     f"Question: <The generated question>\n"
                     f"Answer: <The correct answer>"
                 )
@@ -52,7 +52,7 @@ def generate_questions(request):
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
                     f"for a {level} level audience. "
-                    f"Return the questions in the format: \n\n"
+                    f"Return the questions in the format i dont any other unwanted information  ''' from the initial : \n\n"
                     f"Question: <The generated question>\n"
                     f"Answer: <The correct answer>"
                 )
@@ -62,7 +62,7 @@ def generate_questions(request):
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
                     f"for a {level} level audience. "
-                    f"Return the questions in the format: \n\n"
+                    f"Return the questions in the format i dont any other unwanted information  ''' from the initial : \n\n"
                     f"Question: <The generated question>\n"
                     f"Options: <A list of options separated by commas>\n"
                     f"Answer: <The correct answer>"
