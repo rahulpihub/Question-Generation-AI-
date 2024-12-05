@@ -1,6 +1,6 @@
-Topic,Subtopic,Level,Question Type,Question,Option 1,Option 2,Option 3,Option 4,Answer
-databricks,data engineers,Beginner,True/False,Databricks is a cloud-based platform specifically designed for data engineers.,"Options: True, False"
-databricks,data engineers,Beginner,True/False,Data engineers on Databricks primarily use SQL for all data transformations.,"Options: True, False"
-databricks,data engineers,Beginner,True/False,Databricks allows data engineers to collaborate using shared workspaces and notebooks.,"Options: True, False"
-databricks,data engineers,Beginner,True/False,"Data engineers typically use Databricks for tasks like data ingestion, processing, and visualization.","Options: True, False"
-databricks,data engineers,Beginner,True/False,Knowledge of Python or Scala is completely unnecessary for data engineers working with Databricks.,"Options: True, False"
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Beginner,True/False,Databricks is primarily designed for data scientists and doesn't offer tools relevant to data engineers.,False
+databricks,data engineers,Beginner,True/False,Data engineers on Databricks can use notebooks to orchestrate data pipelines using languages like Python and SQL.,True
+databricks,data engineers,Beginner,True/False,"Delta Lake, an open-source storage layer, is unavailable for use within the Databricks environment by data engineers.",False
+databricks,data engineers,Beginner,True/False,Data engineers working on Databricks typically don't interact with cloud storage services like AWS S3 or Azure Blob Storage.,False
+databricks,data engineers,Beginner,True/False,Databricks offers no built-in tools for scheduling and automating data engineering tasks.,False

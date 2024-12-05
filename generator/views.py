@@ -47,7 +47,7 @@ def generate_questions(request):
                     f"Answer: <The correct answer>"
                 )
                 csv_columns = ["Topic", "Subtopic", "Level", "Question Type", "Question", "Answer"]
-            elif question_type == "True-False":
+            elif question_type == "True/False":
                 prompt = (
                     f"Generate {num_questions} {question_type} questions "
                     f"on the topic '{topic}' with subtopic '{subtopic}' "
