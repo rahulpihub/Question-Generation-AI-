@@ -1,6 +1,7 @@
 from django.shortcuts import render ,redirect
 import csv
 import os
+from datetime import datetime
 import google.generativeai as genai
 from django.conf import settings
 from django.http import HttpResponse
@@ -85,10 +86,11 @@ def generate_questions(request):
 
                 # Ensure the question type is valid for filenames
                 safe_question_type = question_type.replace("/", "_")  # Replace '/' with '_'
+                
+                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-                # Save the questions to CSV
-                csv_file_path = os.path.join(output_dir, f"generated_questions_{safe_question_type}.csv")
-                csv_file_name = f"generated_questions_{question_type.replace('/', '_')}.csv"
+                csv_file_path = os.path.join(output_dir, f"generated_questions_{safe_question_type}_{timestamp}.csv")
+                csv_file_name = f"generated_questions_{question_type.replace('/', '_')}_{timestamp}.csv"
                 csv_file_name = os.path.basename(csv_file_path)
 
                 # Print to verify the path

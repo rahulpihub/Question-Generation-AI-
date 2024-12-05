@@ -1,0 +1,39 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+aptitude,data engineers,Beginner,Fill Ups,Data engineers often use _______ to orchestrate data pipelines.,"workflow management tools (e.g., Airflow, Prefect)"
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular distributed processing framework used by data engineers.,Apache Spark
+aptitude,data engineers,Beginner,Fill Ups,"Data engineers work with _______ data, which is unstructured or semi-structured.",NoSQL
+aptitude,data engineers,Beginner,Fill Ups,_______ is a cloud-based data warehousing service.,"Snowflake, Amazon Redshift, Google BigQuery"
+aptitude,data engineers,Beginner,Fill Ups,_______ is a common data serialization format.,"JSON, Avro, Parquet"
+aptitude,data engineers,Beginner,Fill Ups,Data engineers use _______ to transform data.,"ETL (Extract, Transform, Load) processes"
+aptitude,data engineers,Beginner,Fill Ups,A data _______ describes the structure and organization of data.,schema
+aptitude,data engineers,Beginner,Fill Ups,_______ is the process of loading data into a data warehouse.,Data warehousing
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular message queuing system.,"Kafka, RabbitMQ"
+aptitude,data engineers,Beginner,Fill Ups,Data engineers use _______ control systems like Git.,version
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular data lake storage solution.,"AWS S3, Azure Data Lake Storage, Google Cloud Storage"
+aptitude,data engineers,Beginner,Fill Ups,_______ databases are optimized for online transactional processing (OLTP).,Relational (SQL)
+aptitude,data engineers,Beginner,Fill Ups,_______ databases are optimized for online analytical processing (OLAP).,Data warehouses/Data marts
+aptitude,data engineers,Beginner,Fill Ups,Data _______ refers to the quality and reliability of data.,integrity
+aptitude,data engineers,Beginner,Fill Ups,_______ is the process of gathering data from various sources.,Data ingestion
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular tool for data visualization.,"Tableau, Power BI, Looker"
+aptitude,data engineers,Beginner,Fill Ups,Data engineers use _______ languages like SQL and Python.,programming
+aptitude,data engineers,Beginner,Fill Ups,_______ is the process of cleaning and preparing data for analysis.,Data wrangling/munging
+aptitude,data engineers,Beginner,Fill Ups,A data _______ is a central repository of integrated data from one or more disparate sources.,warehouse
+aptitude,data engineers,Beginner,Fill Ups,"_______ refers to the volume, velocity, and variety of data.",The 3 Vs of Big Data
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular NoSQL database.,"MongoDB, Cassandra, Redis"
+aptitude,data engineers,Beginner,Fill Ups,Data engineers often use _______ to automate tasks.,scripting
+aptitude,data engineers,Beginner,Fill Ups,_______ is a Hadoop component for distributed storage.,HDFS (Hadoop Distributed File System)
+aptitude,data engineers,Beginner,Fill Ups,_______ is a tool for data integration and transformation.,"Apache Kafka Connect, Apache NiFi"
+aptitude,data engineers,Beginner,Fill Ups,Data _______ is the practice of documenting data and its lineage.,governance
+aptitude,data engineers,Beginner,Fill Ups,"Data engineers often work with _______ data, which is constantly updated.",streaming
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular framework for stream processing.,"Apache Flink, Apache Kafka Streams"
+aptitude,data engineers,Beginner,Fill Ups,Data _______ is the process of protecting sensitive data.,security
+aptitude,data engineers,Beginner,Fill Ups,_______ is a data serialization system developed by Apache.,Avro
+aptitude,data engineers,Beginner,Fill Ups,_______ is a columnar storage file format.,"Parquet, ORC"
+aptitude,data engineers,Beginner,Fill Ups,Data engineers use _______ to monitor data pipelines.,monitoring tools
+aptitude,data engineers,Beginner,Fill Ups,_______ is a popular workflow scheduling system.,Apache Airflow
+aptitude,data engineers,Beginner,Fill Ups,Data _______ describes the origin and transformations applied to data.,lineage
+aptitude,data engineers,Beginner,Fill Ups,Data engineers may use _______ to build data pipelines.,cloud-based services
+aptitude,data engineers,Beginner,Fill Ups,_______ is a key aspect of data engineering that ensures data accuracy and consistency.,Data quality
+aptitude,data engineers,Beginner,Fill Ups,_______ involves extracting meaningful insights from data.,Data analysis
+aptitude,data engineers,Beginner,Fill Ups,Data engineers often collaborate with _______.,"data scientists, data analysts"
+aptitude,data engineers,Beginner,Fill Ups,"_______ is the process of collecting, storing, and processing data for analysis.",Data engineering
