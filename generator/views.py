@@ -7,8 +7,6 @@ from django.http import HttpResponse
 from urllib.parse import quote
 from django.http import JsonResponse
 
-
-
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
 api_key = "AIzaSyCx7HuBbuBeExZz0hssMfwWCW-F7u8I46Y"  # Ensure this API key is secure
@@ -214,8 +212,6 @@ def edit_questions(request, csv_file_name):
         })
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
-
-
 
 
 def use_questions(request, csv_file_name):
