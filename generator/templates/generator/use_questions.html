@@ -7,9 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'generator/use_questions.css' %}">
     <title>Use Questions</title>
+    <style>
+        .question-box-container {
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .question-box {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid #000;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .question-box:hover {
+            background-color: #cfcfcf;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Use Questions</h1>
+
+    <!-- Display the total number of questions -->
+    <p><strong>No of Questions:</strong> {{ question_count }}</p>
+
+    <!-- Display numbered boxes for each question -->
+    <div class="question-box-container">
+        {% for i in data %}
+            <div class="question-box">{{ forloop.counter }}</div>
+        {% endfor %}
+    </div>
+
+    <!-- Table to display questions and answers -->
     <table border="1">
         <thead>
             <tr>
@@ -29,6 +66,8 @@
         </tbody>
     </table>
     <br>
+
+    <!-- Back button -->
     <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">Go Back</a>
 </body>
 </html>

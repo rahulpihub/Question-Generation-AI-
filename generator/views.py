@@ -238,13 +238,18 @@ def use_questions(request, csv_file_name):
         filtered_columns = ["Question", "Answer"]
         filtered_data = [[row[question_index], row[answer_index]] for row in data]
 
-        # Pass the filtered data to the template
+        # Count the number of questions
+        question_count = len(filtered_data)
+
+        # Pass the filtered data and question count to the template
         return render(request, "generator/use_questions.html", {
             "columns": filtered_columns,
             "data": filtered_data,
-            "csv_file_name": csv_file_name
+            "csv_file_name": csv_file_name,
+            "question_count": question_count,
         })
     except ValueError:
         return HttpResponse("The CSV file does not have 'Question' or 'Answer' columns.", status=400)
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
+
