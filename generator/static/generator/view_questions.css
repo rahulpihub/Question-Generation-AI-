@@ -8,7 +8,7 @@
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f7f6;
+    background-color: #ffffff; /* White background */
     color: #333;
     padding: 20px;
     display: flex;
@@ -19,7 +19,7 @@ body {
 /* Title styling */
 h1 {
     font-size: 2.5em;
-    color: #2a6f87;
+    color: #2d6a4f; /* Dark green title color */
     margin-bottom: 20px;
 }
 
@@ -29,42 +29,89 @@ table {
     max-width: 1200px;
     border-collapse: collapse;
     margin-bottom: 20px;
-    border: 1px solid #ddd; /* Added border to the table */
+    border: 1px solid #ddd; /* Light border for the table */
 }
 
 th, td {
     padding: 12px 15px;
     text-align: center;
     font-size: 1em;
-    border: 1px solid #ddd; /* Added border to table cells */
+    border: 1px solid #ddd; /* Light border for table cells */
 }
 
 th {
-    background-color: #2a6f87;
+    background-color: #4CAF50; /* Green header */
     color: white;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #f9f9f9; /* Light gray for even rows */
 }
 
 tr:hover {
-    background-color: #e0f7fa;
+    background-color: #e0f7fa; /* Light greenish hover effect */
+}
+
+/* Textarea styling inside table */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4CAF50; /* Green border for textareas */
+    font-size: 14px;
+    resize: vertical;
+    background-color: #f4f7f6; /* Slight off-white background for textareas */
 }
 
 /* Link styling */
 a {
     font-size: 1.1em;
     text-decoration: none;
-    color: #2a6f87;
+    color: #4CAF50; /* Green color for links */
     padding: 10px 15px;
-    border: 1px solid #2a6f87;
+    border: 1px solid #4CAF50; /* Green border */
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: white; /* White background for link */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a:hover {
-    background-color: #2a6f87;
-    color: white;
+    background-color: #4CAF50; /* Green background on hover */
+    color: white; /* White text on hover */
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50; /* Green background for button */
+    color: #4CAF50;
+    border: none;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green for hover effect */
+}
+
+button:active {
+    background-color: #3e8e41; /* Even darker green for active state */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    textarea {
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 14px;
+    }
 }

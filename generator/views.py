@@ -170,6 +170,7 @@ def view_questions(request, csv_file_name):
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
 
+
 def edit_questions(request, csv_file_name):
     try:
         file_path = os.path.join(settings.OUTPUT_DIR, csv_file_name)
@@ -186,17 +187,21 @@ def edit_questions(request, csv_file_name):
         data = rows[1:]
 
         if request.method == "POST":
-            # Update CSV data from POST request
-            updated_data = request.POST.getlist("question")
+            # Process updated CSV data from the POST request
+            updated_data = []
             for i, row in enumerate(data):
-                if i < len(updated_data):  # Ensure we don't run out of updated data
-                    row[1] = updated_data[i]  # Update the second column with new values
+                updated_row = []
+                for j, cell in enumerate(row):
+                    # Get the updated value for each cell
+                    updated_value = request.POST.get(f"cell_{i+1}_{j+1}")
+                    updated_row.append(updated_value if updated_value else cell)  # Use original value if empty
+                updated_data.append(updated_row)
 
-            # Save updated data back to CSV
+            # Save updated data back to the CSV
             with open(file_path, mode="w", newline='', encoding="utf-8") as file:
                 writer = csv.writer(file)
                 writer.writerow(columns)
-                writer.writerows(data)
+                writer.writerows(updated_data)
 
             return redirect('view_questions', csv_file_name=csv_file_name)
 
@@ -207,4 +212,3 @@ def edit_questions(request, csv_file_name):
         })
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
-

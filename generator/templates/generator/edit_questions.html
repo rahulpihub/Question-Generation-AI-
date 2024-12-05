@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'generator/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'generator/edit_question.css' %}">
     <title>Edit Questions</title>
 </head>
 <body>
@@ -23,10 +23,11 @@
             <tbody>
                 {% for row in data %}
                     <tr>
-                        <td>{{ row.0 }}</td>
-                        <td>
-                            <textarea name="question" rows="3" cols="50">{{ row.1 }}</textarea>
-                        </td>
+                        {% for cell in row %}
+                            <td>
+                                <textarea name="cell_{{ forloop.parentloop.counter }}_{{ forloop.counter }}" rows="3" cols="50">{{ cell }}</textarea>
+                            </td>
+                        {% endfor %}
                     </tr>
                 {% endfor %}
             </tbody>
