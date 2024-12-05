@@ -142,8 +142,6 @@ def download_csv(request, file_name):
         return HttpResponse(f"Error: {str(e)}", status=500)
 
 
-
-
 def view_questions(request, csv_file_name):
     try:
         # Get the file path
@@ -194,7 +192,8 @@ def edit_questions(request, csv_file_name):
                 for j, cell in enumerate(row):
                     # Get the updated value for each cell
                     updated_value = request.POST.get(f"cell_{i+1}_{j+1}")
-                    updated_row.append(updated_value if updated_value else cell)  # Use original value if empty
+                    # If the value is empty, retain the original cell value
+                    updated_row.append(updated_value if updated_value is not None else cell)
                 updated_data.append(updated_row)
 
             # Save updated data back to the CSV
