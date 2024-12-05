@@ -169,7 +169,11 @@ def view_questions(request, csv_file_name):
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
     
-
+from django.shortcuts import render
+from django.http import HttpResponse
+import csv
+import os
+from django.conf import settings
 
 def edit_questions(request, csv_file_name):
     try:
@@ -238,10 +242,14 @@ def edit_questions(request, csv_file_name):
                 writer.writerow(filtered_columns)
                 writer.writerows(updated_data)
 
-            # After "Save Changes", we redirect back to the questions view
-            if 'save_changes' in request.POST:
-                return redirect('view_questions', csv_file_name=csv_file_name)
+            # Don't redirect immediately, stay on the current page
+            return render(request, "generator/edit_questions.html", {
+                "columns": filtered_columns,
+                "data": mapped_data,
+                "csv_file_name": csv_file_name
+            })
 
+        # Render the edit page initially or after POST (to show the updates)
         return render(request, "generator/edit_questions.html", {
             "columns": filtered_columns,
             "data": mapped_data,
