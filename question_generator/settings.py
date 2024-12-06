@@ -81,10 +81,17 @@ WSGI_APPLICATION = 'question_generator.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# settings.py
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'Project_DB',  # Replace with your MongoDB database name 
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'localhost',  # Replace with your MongoDB host
+            'port': 27017,  # Replace with your MongoDB port
+        }
     }
 }
 

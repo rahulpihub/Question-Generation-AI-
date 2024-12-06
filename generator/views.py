@@ -7,6 +7,8 @@ from django.conf import settings
 from django.http import HttpResponse
 from urllib.parse import quote
 from django.http import JsonResponse
+from .models import Question  # Import the model
+
 
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
@@ -108,15 +110,43 @@ def generate_questions(request):
 
                         if question_type == "Fill Ups":
                             answer_text = lines[1].replace("Answer: ", "").strip()
+                            Question.objects.create(
+                                topic=topic,
+                                subtopic=subtopic,
+                                level=level,
+                                question_type=question_type,
+                                question=question_text,
+                                answer=answer_text
+                            )
                             writer.writerow([topic, subtopic, level, question_type, question_text, answer_text])
                         elif question_type == "True/False":
                             answer_text = lines[1].replace("Answer: ", "").strip()
+                            Question.objects.create(
+                                topic=topic,
+                                subtopic=subtopic,
+                                level=level,
+                                question_type=question_type,
+                                question=question_text,
+                                answer=answer_text
+                            )
                             writer.writerow([topic, subtopic, level, question_type, question_text, answer_text])
                         else:
                             options_text = lines[1].replace("Options: ", "").strip()
                             options = options_text.split(",")  # Split options by commas
                             options = options + [""] * (4 - len(options))  # Ensure we have 4 options
                             answer_text = lines[2].replace("Answer: ", "").strip()
+                            Question.objects.create(
+                                topic=topic,
+                                subtopic=subtopic,
+                                level=level,
+                                question_type=question_type,
+                                question=question_text,
+                                option_1=options[0],
+                                option_2=options[1],
+                                option_3=options[2],
+                                option_4=options[3],
+                                answer=answer_text
+                            )
                             writer.writerow([topic, subtopic, level, question_type, question_text, *options, answer_text])
 
                 # Return a response indicating success and the path for download
@@ -308,4 +338,6 @@ def use_questions(request, csv_file_name):
         return HttpResponse("The CSV file does not have 'Question' or 'Answer' columns.", status=400)
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
+
+
 
