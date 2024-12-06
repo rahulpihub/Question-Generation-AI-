@@ -1,3 +1,0 @@
-Topic,Subtopic,Level,Question Type,Question,Option 1,Option 2,Option 3,Option 4,Answer
-databricks,data engineers,Beginner,Multiple Choice,Which of these tasks is a common responsibility for a Data Engineer working with Databricks?,Building data pipelines, Designing user interfaces, Managing server infrastructure, Conducting A/B testing,Building data pipelines
-databricks,data engineers,Beginner,Multiple Choice,What language is commonly used by Data Engineers to interact with Databricks for data transformation and manipulation?,SQL, Java, C++, HTML,SQL

@@ -1,0 +1,10 @@
+Question,Option 1,Option 2,Option 3,Option 4,Answer
+What is the primary cloud-based platform Databricks utilizes?,AWS, Azure, Google Cloud, All of the above,All of the above
+Which language is commonly used by Data Engineers within the Databricks environment?,Python, SQL, Scala, R, All of the above
+What does ACID compliance refer to in the context of Delta Lake?,Atomicity, Consistency, Isolation, Durability, All of the above
+Which file format is commonly used with Spark and Databricks?,Parquet, CSV, JSON, All of the above,All of the above
+Which file format is commonly used with Spark and Databricks?,Parquet, CSV, JSON, All of the above,All of the above
+What is a Databricks Workspace?,Question: What is the purpose of Databricks Runtime?, A physical office space, A type of database, A data storage folder,"Options: Provides a pre-configured Spark environment, Manages user accounts, Visualizes data, Stores data"
+What is a Databricks Workspace?,A collaborative environment for data engineering tasks, A physical office space, A type of database, A data storage folder,A collaborative environment for data engineering tasks
+How can data be ingested into Databricks?,From cloud storage, From databases, From streaming sources, All of the above,All of the above
+ryr,ryr, Perform data analysis,y,yr,yr

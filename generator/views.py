@@ -12,7 +12,7 @@ from .models import Question  # Import the model
 
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
-api_key = "AIzaSyDUZjA_bSO8YT0fkSEAPudyc_Kd0ew5YvM"  # Ensure this API key is secure
+api_key = "AIzaSyCx7HuBbuBeExZz0hssMfwWCW-F7u8I46Y"  # Ensure this API key is secure
 genai.configure(api_key=api_key)
 
 # Set the output directory for CSV
