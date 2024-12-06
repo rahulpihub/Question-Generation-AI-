@@ -1,0 +1,41 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Advanced,Fill Ups,Databricks utilizes a __________ architecture that allows for auto-scaling and fault tolerance.,distributed
+databricks,data engineers,Advanced,Fill Ups,Data Engineers frequently use Databricks' __________ API for automating tasks and integrating with other systems.,REST
+databricks,data engineers,Advanced,Fill Ups,__________ is the unified data governance solution offered by Databricks to manage data access and permissions.,Unity Catalog
+databricks,data engineers,Advanced,Fill Ups,"Databricks supports __________ notebooks, allowing for collaborative data exploration and analysis using languages like Python, Scala, R, and SQL.",interactive
+databricks,data engineers,Advanced,Fill Ups,Delta Live Tables (DLT) in Databricks simplifies the process of building and managing __________ data pipelines.,reliable
+databricks,data engineers,Advanced,Fill Ups,Data Engineers often leverage __________ for orchestrating complex data pipelines and workflows within Databricks.,workflows
+databricks,data engineers,Advanced,Fill Ups,The __________ runtime environment in Databricks is optimized for data science and machine learning tasks.,ML
+databricks,data engineers,Advanced,Fill Ups,__________ is the file format optimized for storing large datasets on Databricks and is commonly used for data warehousing and lakehouse architectures.,Delta Lake
+databricks,data engineers,Advanced,Fill Ups,Data Engineers can use Databricks' __________ to define and manage data quality rules and expectations.,Delta Live Tables expectations
+databricks,data engineers,Advanced,Fill Ups,__________ is a key feature of Delta Lake that allows for efficient data versioning and time travel.,Data versioning
+databricks,data engineers,Advanced,Fill Ups,Databricks integrates with __________ for data visualization and reporting purposes.,Databricks SQL
+databricks,data engineers,Advanced,Fill Ups,Data Engineers use __________ to define and manage the schema and data types of tables in Databricks.,schemas
+databricks,data engineers,Advanced,Fill Ups,The Databricks __________ allows for seamless integration with various data sources and sinks.,partner connect
+databricks,data engineers,Advanced,Fill Ups,Databricks supports __________ for building streaming data pipelines with low latency.,Structured Streaming
+databricks,data engineers,Advanced,Fill Ups,Data Engineers can use the __________ feature in Databricks to monitor the performance and resource utilization of their clusters.,Ganglia metrics
+databricks,data engineers,Advanced,Fill Ups,Auto Loader in Databricks simplifies the ingestion of __________ data from cloud storage.,incremental
+databricks,data engineers,Advanced,Fill Ups,Data Engineers often utilize Databricks' __________ to query and analyze large datasets using SQL.,SQL warehouses
+databricks,data engineers,Advanced,Fill Ups,Databricks' __________ allows for easy deployment and management of machine learning models.,Model Registry
+databricks,data engineers,Advanced,Fill Ups,__________ is the default language for interacting with data in Databricks notebooks and is particularly useful for data manipulation and transformation tasks.,Python
+databricks,data engineers,Advanced,Fill Ups,Data Engineers can use Databricks __________ to package and deploy their code as reusable libraries and functions.,Repos
+databricks,data engineers,Advanced,Fill Ups,Databricks offers a managed cloud service that simplifies the deployment and management of ______ clusters.,Spark
+databricks,data engineers,Advanced,Fill Ups,"For Data Engineers, Databricks' Unified Analytics Platform combines data warehousing, data engineering, and ______ into a single workspace.",data science/machine learning
+databricks,data engineers,Advanced,Fill Ups,"Delta Lake, an open-source storage layer, provides ______ to data stored in cloud storage.",ACID transactions
+databricks,data engineers,Advanced,Fill Ups,______ is the Databricks-optimized runtime engine that delivers superior performance and reliability for Apache Spark workloads.,Databricks Runtime
+databricks,data engineers,Advanced,Fill Ups,"Databricks supports multiple programming languages including Python, Scala, SQL, R, and ______.",Java
+databricks,data engineers,Advanced,Fill Ups,Data Engineers can leverage Databricks' ______ feature to simplify ETL processes and automate workflows.,Databricks Workflows/Jobs
+databricks,data engineers,Advanced,Fill Ups,"Databricks integrates with various data sources, including cloud storage services, databases, and streaming platforms like ______.","Kafka, Kinesis"
+databricks,data engineers,Advanced,Fill Ups,The ______ feature in Databricks allows data engineers to collaborate on notebooks and share code efficiently.,collaborative notebooks/repos
+databricks,data engineers,Advanced,Fill Ups,Data engineers can use ______ to define and enforce data quality rules within Databricks.,Delta Live Tables
+databricks,data engineers,Advanced,Fill Ups,"Databricks supports ______, allowing data engineers to version control their code and configurations.",Git integration
+databricks,data engineers,Advanced,Fill Ups,______ is the serverless SQL warehouse service provided by Databricks that enables quick data exploration and analysis.,Databricks SQL
+databricks,data engineers,Advanced,Fill Ups,"Using Databricks, data engineers can build ______ pipelines to process data in real-time.",streaming
+databricks,data engineers,Advanced,Fill Ups,Databricks' ______ framework simplifies the development and deployment of machine learning models.,MLflow
+databricks,data engineers,Advanced,Fill Ups,______ allows data engineers to schedule and orchestrate complex data pipelines on Databricks.,Databricks Workflows
+databricks,data engineers,Advanced,Fill Ups,Data engineers can use the ______ API to interact with Databricks programmatically and automate tasks.,REST API / Databricks CLI
+databricks,data engineers,Advanced,Fill Ups,The ______ feature in Databricks provides detailed insights into cluster performance and resource utilization.,monitoring and logging
+databricks,data engineers,Advanced,Fill Ups,"Databricks supports ______, which enables secure access control and data governance.",Unity Catalog / fine-grained access control
+databricks,data engineers,Advanced,Fill Ups,Data engineers use the ______ tool to visualize data transformations and debug pipelines within Databricks.,Data Lineage / Data Explorer
+databricks,data engineers,Advanced,Fill Ups,______ notebooks allow for interactive data exploration and visualization in Databricks.,Databricks notebooks
+databricks,data engineers,Advanced,Fill Ups,Using Databricks with ______ enables Infrastructure as Code for managing Databricks resources.,Terraform / CloudFormation / Pulumi

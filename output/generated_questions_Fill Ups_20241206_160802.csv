@@ -1,0 +1,16 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Beginner,Fill Ups,Databricks is a data and analytics platform built on top of which popular open-source project?,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,What cloud providers does Databricks support for hosting its services?,"AWS, Azure, and GCP (Google Cloud Platform)"
+databricks,data engineers,Beginner,Fill Ups,"True or False: Databricks allows data engineers to use various programming languages like Python, Scala, SQL, and R.",True
+databricks,data engineers,Beginner,Fill Ups,A key component of Databricks that provides interactive data analysis and exploration is called what?,Databricks Notebooks
+databricks,data engineers,Beginner,Fill Ups,Databricks offers a managed service for which distributed file system commonly used with big data?,"Delta Lake (while technically not a file system itself, it's often discussed in this context due to its integration and optimization for use with Spark and cloud storage)"
+databricks,data engineers,Beginner,Fill Ups,What is the name of Databricks's serverless compute platform that allows data engineers to run code without managing infrastructure?,Databricks SQL (formerly known as Serverless SQL)
+databricks,data engineers,Beginner,Fill Ups,What feature of Databricks simplifies cluster creation and management for various workloads?,Autoscaling and cluster policies
+databricks,data engineers,Beginner,Fill Ups,Databricks's collaborative workspace allows data engineers to share what items with their colleagues?,"Notebooks, dashboards, and data"
+databricks,data engineers,Beginner,Fill Ups,"What type of data pipelines can data engineers build using Databricks, focusing on data processing that triggers upon arrival?",Streaming pipelines (often using Spark Streaming or Structured Streaming)
+databricks,data engineers,Beginner,Fill Ups,"What service within Databricks provides a unified interface for exploring data, querying it with SQL, and creating visualizations?",Databricks SQL
+databricks,data engineers,Beginner,Fill Ups,,"Question:  What is the name of Databricks's optimization layer for data lakes that provides ACID transactions, data versioning, and schema enforcement?"
+databricks,data engineers,Beginner,Fill Ups,What is a common job role responsible for developing and maintaining data pipelines and infrastructure on Databricks?,Data Engineer
+databricks,data engineers,Beginner,Fill Ups,"True or False: Databricks offers features for data governance, security, and compliance.",True
+databricks,data engineers,Beginner,Fill Ups,What feature in Databricks enables scheduling and orchestrating data workflows?,Databricks Workflows (formerly known as Jobs)
+databricks,data engineers,Beginner,Fill Ups,Databricks is a popular platform for data engineers because it simplifies the process of building and managing _______ pipelines.,data

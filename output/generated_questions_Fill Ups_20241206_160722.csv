@@ -1,0 +1,12 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Beginner,Fill Ups,Databricks is a data and AI platform built on top of which open-source project?,Apache Spark
+databricks,data engineers,Beginner,Fill Ups,What language is commonly used by data engineers to work with data in Databricks notebooks?,"Python (or Scala, R, SQL)"
+databricks,data engineers,Beginner,Fill Ups,What type of cloud platform can Databricks be deployed on?,"AWS, Azure, and GCP (or multi-cloud)"
+databricks,data engineers,Beginner,Fill Ups,"Delta Lake, an open-source storage layer, is often used with Databricks to provide what key features?","ACID transactions, schema enforcement, and data versioning"
+databricks,data engineers,Beginner,Fill Ups,"Databricks provides a collaborative workspace for what roles, in addition to data engineers?","Data scientists, machine learning engineers, and data analysts"
+databricks,data engineers,Beginner,Fill Ups,What is the name of the Databricks tool that allows for scheduling and orchestrating data workflows?,Databricks Workflows
+databricks,data engineers,Beginner,Fill Ups,True or False: Databricks offers a serverless compute option that automatically scales resources based on workload demands.,True
+databricks,data engineers,Beginner,Fill Ups,What is the primary advantage of using Databricks for data engineering compared to traditional on-premises solutions?,"Scalability, collaboration, and managed infrastructure"
+databricks,data engineers,Beginner,Fill Ups,Data engineers often use Databricks to build what kind of pipelines?,"ETL (Extract, Transform, Load) or data pipelines"
+databricks,data engineers,Beginner,Fill Ups,Databricks allows data engineers to query data using which interactive query language?,SQL
+databricks,data engineers,Beginner,Fill Ups,Databricks is a popular platform for data engineers because it allows them to easily work with _______ clusters.,Spark

@@ -1,4 +1,4 @@
-from django.shortcuts import render ,redirect
+from django.shortcuts import render, redirect
 import csv
 import os
 from datetime import datetime
@@ -45,9 +45,8 @@ def generate_questions(request):
         except ValueError:
             return render(request, "generator/index.html", {"error": "Please enter a valid number for the number of questions."})
 
-        # Split the number of questions into two halves
-        half1 = num_questions // 2
-        half2 = num_questions - half1
+        if num_questions < 1:
+            return render(request, "generator/index.html", {"error": "Number of questions must be at least 1."})
 
         # Generate prompts
         prompt_template = {
@@ -85,17 +84,28 @@ def generate_questions(request):
         questions_list = []
 
         try:
-            # First half using API key one
-            genai.configure(api_key=apione)
-            prompt_half1 = prompt.replace("{count}", str(half1))
-            response1 = genai.GenerativeModel("gemini-1.5-pro-latest").generate_content(prompt_half1)
-            questions_list.extend(response1._result.candidates[0].content.parts[0].text.strip().split("\n\n"))
+            # If only 1 question, use the first API only
+            if num_questions == 1:
+                genai.configure(api_key=apione)
+                prompt_single = prompt.replace("{count}", "1")
+                response = genai.GenerativeModel("gemini-1.5-pro-latest").generate_content(prompt_single)
+                questions_list.extend(response._result.candidates[0].content.parts[0].text.strip().split("\n\n"))
+            else:
+                # Split the number of questions into two halves
+                half1 = num_questions // 2
+                half2 = num_questions - half1
 
-            # Second half using API key two
-            genai.configure(api_key=apitwo)
-            prompt_half2 = prompt.replace("{count}", str(half2))
-            response2 = genai.GenerativeModel("gemini-1.5-pro-latest").generate_content(prompt_half2)
-            questions_list.extend(response2._result.candidates[0].content.parts[0].text.strip().split("\n\n"))
+                # First half using API key one
+                genai.configure(api_key=apione)
+                prompt_half1 = prompt.replace("{count}", str(half1))
+                response1 = genai.GenerativeModel("gemini-1.5-pro-latest").generate_content(prompt_half1)
+                questions_list.extend(response1._result.candidates[0].content.parts[0].text.strip().split("\n\n"))
+
+                # Second half using API key two
+                genai.configure(api_key=apitwo)
+                prompt_half2 = prompt.replace("{count}", str(half2))
+                response2 = genai.GenerativeModel("gemini-1.5-pro-latest").generate_content(prompt_half2)
+                questions_list.extend(response2._result.candidates[0].content.parts[0].text.strip().split("\n\n"))
 
             # Ensure the question type is valid for filenames
             safe_question_type = question_type.replace("/", "_")  # Replace '/' with '_'
@@ -162,6 +172,7 @@ def generate_questions(request):
             return render(request, "generator/index.html", {"error": f"Error generating questions: {str(e)}"})
 
     return render(request, "generator/index.html")
+
 
 
 def download_csv(request, file_name):
