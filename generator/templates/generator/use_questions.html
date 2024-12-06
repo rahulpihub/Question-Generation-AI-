@@ -21,10 +21,16 @@
         {% endfor %}
     </div>
 
-    <!-- Section to display the selected question and answer -->
+    <!-- Section to display the selected question, options, and answer -->
     <div class="question-answer-display">
         <h3 id="question-title">Click on a box to view the question and answer.</h3>
         <p id="question-text"><strong>Question:</strong><span id="question-content"></span></p>
+
+        <!-- Conditionally display options -->
+        <div id="options-container">
+            <p id="options-text"><strong>Options:</strong> <span id="options-content"></span></p>
+        </div>
+
         <p id="answer-text"><strong>Answer:</strong> <span id="answer-content"></span></p>
     </div>
 
@@ -36,13 +42,15 @@
             const questionBoxes = document.querySelectorAll(".question-box");
             const questionContent = document.getElementById("question-content");
             const answerContent = document.getElementById("answer-content");
+            const optionsContent = document.getElementById("options-content");
             const questionTitle = document.getElementById("question-title");
+            const optionsContainer = document.getElementById("options-container");
 
             questionBoxes.forEach(box => {
                 box.addEventListener("click", () => {
                     const index = box.getAttribute("data-index");
-                    
-                    // Fetch the question and answer dynamically using AJAX
+
+                    // Fetch the question, options, and answer dynamically using AJAX
                     fetch(`?index=${index}`, {
                         headers: { "X-Requested-With": "XMLHttpRequest" }
                     })
@@ -52,16 +60,28 @@
                             questionTitle.textContent = "Error";
                             questionContent.textContent = data.error;
                             answerContent.textContent = "";
+                            optionsContent.textContent = "";
+                            optionsContainer.style.display = "none";  // Hide options if error
                         } else {
                             questionTitle.textContent = `Question ${parseInt(index) + 1}`;
                             questionContent.textContent = data.question;
                             answerContent.textContent = data.answer;
+
+                            // Display the options dynamically if they exist
+                            if (data.options.some(option => option !== null)) {
+                                optionsContainer.style.display = "block";  // Show options section
+                                optionsContent.textContent = data.options.filter(option => option !== null).join(", ");
+                            } else {
+                                optionsContainer.style.display = "none";  // Hide options section if no options
+                            }
                         }
                     })
                     .catch(error => {
                         questionTitle.textContent = "Error";
                         questionContent.textContent = "Failed to load question.";
                         answerContent.textContent = "";
+                        optionsContent.textContent = "";
+                        optionsContainer.style.display = "none";  // Hide options on error
                     });
                 });
             });

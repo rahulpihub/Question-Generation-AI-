@@ -292,6 +292,7 @@ def edit_questions(request, csv_file_name):
         return HttpResponse(f"Error: {str(e)}", status=500)
 
 
+
 def use_questions(request, csv_file_name):
     try:
         # Get the file path
@@ -305,23 +306,40 @@ def use_questions(request, csv_file_name):
             reader = csv.reader(file)
             rows = list(reader)
 
-        # Extract only "Question" and "Answer" columns
+        # Extract the columns and data
         columns = rows[0]
         data = rows[1:]
 
-        # Get indices of "Question" and "Answer"
+        # Get indices of relevant columns: "Question", "Option 1", "Option 2", "Option 3", "Option 4", and "Answer"
         question_index = columns.index("Question")
         answer_index = columns.index("Answer")
 
-        filtered_data = [[row[question_index], row[answer_index]] for row in data]
+        # Try to extract the options, defaulting to None if not found
+        option_indices = []
+        for i in range(1, 5):  # For Option 1, Option 2, Option 3, Option 4
+            try:
+                option_indices.append(columns.index(f"Option {i}"))
+            except ValueError:
+                option_indices.append(None)
+
+        filtered_data = []
+        for row in data:
+            # Prepare the options list, skipping None values
+            options = [row[i] if i is not None else None for i in option_indices]
+            filtered_data.append({
+                "question": row[question_index],
+                "options": options,
+                "answer": row[answer_index]
+            })
 
         # If it's an AJAX request for a specific question
         if request.headers.get('X-Requested-With') == 'XMLHttpRequest':
             question_index = int(request.GET.get('index', 0))
             if 0 <= question_index < len(filtered_data):
                 return JsonResponse({
-                    "question": filtered_data[question_index][0],
-                    "answer": filtered_data[question_index][1]
+                    "question": filtered_data[question_index]["question"],
+                    "options": filtered_data[question_index]["options"],
+                    "answer": filtered_data[question_index]["answer"]
                 })
             return JsonResponse({"error": "Index out of range"}, status=400)
 
@@ -335,9 +353,6 @@ def use_questions(request, csv_file_name):
             "question_count": question_count,
         })
     except ValueError:
-        return HttpResponse("The CSV file does not have 'Question' or 'Answer' columns.", status=400)
+        return HttpResponse("The CSV file does not have the necessary columns.", status=400)
     except Exception as e:
         return HttpResponse(f"Error: {str(e)}", status=500)
-
-
-
