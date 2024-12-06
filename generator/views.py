@@ -12,7 +12,7 @@ from .models import Question  # Import the model
 
 # Configure Gemini API
 model = genai.GenerativeModel('gemini-1.5-pro-latest')
-api_key = "AIzaSyCx7HuBbuBeExZz0hssMfwWCW-F7u8I46Y"  # Ensure this API key is secure
+api_key = "AIzaSyDUZjA_bSO8YT0fkSEAPudyc_Kd0ew5YvM"  # Ensure this API key is secure
 genai.configure(api_key=api_key)
 
 # Set the output directory for CSV
@@ -292,7 +292,6 @@ def edit_questions(request, csv_file_name):
         return HttpResponse(f"Error: {str(e)}", status=500)
 
 
-
 def use_questions(request, csv_file_name):
     try:
         # Get the file path
@@ -325,7 +324,7 @@ def use_questions(request, csv_file_name):
         filtered_data = []
         for row in data:
             # Prepare the options list, skipping None values
-            options = [row[i] if i is not None else None for i in option_indices]
+            options = [row[i] if i is not None else "N/A" for i in option_indices]
             filtered_data.append({
                 "question": row[question_index],
                 "options": options,

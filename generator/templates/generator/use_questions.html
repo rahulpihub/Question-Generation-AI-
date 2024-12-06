@@ -27,8 +27,12 @@
         <p id="question-text"><strong>Question:</strong><span id="question-content"></span></p>
 
         <!-- Conditionally display options -->
-        <div id="options-container">
-            <p id="options-text"><strong>Options:</strong> <span id="options-content"></span></p>
+        <div id="options-container" style="display: none;">
+            <p id="options-text"><strong>Options:</strong></p>
+            <p id="option-a">Option A: <span id="option-a-content"></span></p>
+            <p id="option-b">Option B: <span id="option-b-content"></span></p>
+            <p id="option-c">Option C: <span id="option-c-content"></span></p>
+            <p id="option-d">Option D: <span id="option-d-content"></span></p>
         </div>
 
         <p id="answer-text"><strong>Answer:</strong> <span id="answer-content"></span></p>
@@ -42,7 +46,10 @@
             const questionBoxes = document.querySelectorAll(".question-box");
             const questionContent = document.getElementById("question-content");
             const answerContent = document.getElementById("answer-content");
-            const optionsContent = document.getElementById("options-content");
+            const optionsContentA = document.getElementById("option-a-content");
+            const optionsContentB = document.getElementById("option-b-content");
+            const optionsContentC = document.getElementById("option-c-content");
+            const optionsContentD = document.getElementById("option-d-content");
             const questionTitle = document.getElementById("question-title");
             const optionsContainer = document.getElementById("options-container");
 
@@ -60,19 +67,26 @@
                             questionTitle.textContent = "Error";
                             questionContent.textContent = data.error;
                             answerContent.textContent = "";
-                            optionsContent.textContent = "";
+                            optionsContentA.textContent = "";
+                            optionsContentB.textContent = "";
+                            optionsContentC.textContent = "";
+                            optionsContentD.textContent = "";
                             optionsContainer.style.display = "none";  // Hide options if error
                         } else {
                             questionTitle.textContent = `Question ${parseInt(index) + 1}`;
                             questionContent.textContent = data.question;
                             answerContent.textContent = data.answer;
 
-                            // Display the options dynamically if they exist
-                            if (data.options.some(option => option !== null)) {
-                                optionsContainer.style.display = "block";  // Show options section
-                                optionsContent.textContent = data.options.filter(option => option !== null).join(", ");
+                            // Display the options dynamically if they exist and are not "N/A"
+                            const options = data.options;
+                            if (options.every(option => option === "N/A")) {
+                                optionsContainer.style.display = "none";  // Hide options if all are "N/A"
                             } else {
-                                optionsContainer.style.display = "none";  // Hide options section if no options
+                                optionsContainer.style.display = "block";  // Show options section
+                                optionsContentA.textContent = options[0] !== "N/A" ? options[0] : "N/A";
+                                optionsContentB.textContent = options[1] !== "N/A" ? options[1] : "N/A";
+                                optionsContentC.textContent = options[2] !== "N/A" ? options[2] : "N/A";
+                                optionsContentD.textContent = options[3] !== "N/A" ? options[3] : "N/A";
                             }
                         }
                     })
@@ -80,7 +94,10 @@
                         questionTitle.textContent = "Error";
                         questionContent.textContent = "Failed to load question.";
                         answerContent.textContent = "";
-                        optionsContent.textContent = "";
+                        optionsContentA.textContent = "";
+                        optionsContentB.textContent = "";
+                        optionsContentC.textContent = "";
+                        optionsContentD.textContent = "";
                         optionsContainer.style.display = "none";  // Hide options on error
                     });
                 });
