@@ -1,0 +1,38 @@
+Topic,Subtopic,Level,Question Type,Question,Answer
+databricks,data engineers,Advanced,True/False,Databricks SQL allows data engineers to directly query data stored in Delta Lake using standard SQL syntax.,True
+databricks,data engineers,Advanced,True/False,Databricks Connect allows data engineers to connect their preferred IDEs (like IntelliJ or PyCharm) to Databricks clusters for local development and testing.,True
+databricks,data engineers,Advanced,True/False,Databricks supports only Python for data engineering tasks.,False
+databricks,data engineers,Advanced,True/False,Data engineers can use Databricks to orchestrate complex data pipelines using tools like Apache Airflow and dbutils.notebook.run().,True
+databricks,data engineers,Advanced,True/False,"Delta Live Tables (DLT) in Databricks automatically handle data quality, testing, and lineage tracking for ETL pipelines.",True
+databricks,data engineers,Advanced,True/False,Databricks Repos enables collaborative development and version control for notebooks and other code artifacts.,True
+databricks,data engineers,Advanced,True/False,Databricks only supports batch processing of data.,False
+databricks,data engineers,Advanced,True/False,Data engineers can use Auto Loader to incrementally process new data files landing in cloud storage without manually managing file lists.,True
+databricks,data engineers,Advanced,True/False,Databricks integrates with Unity Catalog for centralized access control and data governance across workspaces.,True
+databricks,data engineers,Advanced,True/False,"Databricks Runtime for Machine Learning (MLR) includes pre-installed libraries and tools specifically for machine learning tasks, but is not useful for data engineering.",False
+databricks,data engineers,Advanced,True/False,The `dbutils.fs` utility allows data engineers to interact with the underlying file system of the Databricks cluster.,True
+databricks,data engineers,Advanced,True/False,Data engineers can define custom libraries in Databricks to reuse common code across notebooks and jobs.,True
+databricks,data engineers,Advanced,True/False,Databricks supports streaming data ingestion and processing using technologies like Apache Kafka and Spark Streaming.,True
+databricks,data engineers,Advanced,True/False,Delta Sharing enables secure data sharing with external organizations without requiring data copying.,True
+databricks,data engineers,Advanced,True/False,Databricks supports only Azure cloud platform.,False
+databricks,data engineers,Advanced,True/False,Data engineers can utilize the Databricks CLI to automate tasks and manage their Databricks deployments.,True
+databricks,data engineers,Advanced,True/False,Databricks clusters can only be accessed through the web UI.,False
+databricks,data engineers,Advanced,True/False,Data engineers can leverage Databricks SQL Analytics for interactive data exploration and visualization.,True
+databricks,data engineers,Advanced,True/False,SCIM API in Databricks can be used to automate user and group provisioning.,True
+databricks,data engineers,Advanced,True/False,"Data engineers can use the `spark.read` function to load data from various sources, including Delta Lake, Parquet, CSV, and JSON.",True
+databricks,data engineers,Advanced,True/False,Databricks Runtime is built on top of Apache Spark.,True
+databricks,data engineers,Advanced,True/False,Data engineers can only use Python with Databricks notebooks.,False
+databricks,data engineers,Advanced,True/False,`dbutils.widgets` allows data engineers to create interactive parameters for notebooks.,True
+databricks,data engineers,Advanced,True/False,Databricks jobs can be scheduled to run automatically on a recurring basis.,True
+databricks,data engineers,Advanced,True/False,The `display()` function is used to render dataframes and visualizations within a Databricks notebook.,True
+databricks,data engineers,Advanced,True/False,Data engineers don't need to manage dependencies when using Databricks.,False
+databricks,data engineers,Advanced,True/False,Table ACLs in Unity Catalog offer fine-grained access control to Delta tables.,True
+databricks,data engineers,Advanced,True/False,Data Lineage in Databricks only tracks transformations within notebooks.,False
+databricks,data engineers,Advanced,True/False,Data engineers can leverage CI/CD pipelines with Databricks Repos.,True
+databricks,data engineers,Advanced,True/False,Delta Lake's time travel capability allows reverting to previous versions of data.,True
+databricks,data engineers,Advanced,True/False,Databricks supports only one type of cluster.,False
+databricks,data engineers,Advanced,True/False,Secret scopes are used to securely store credentials and sensitive information in Databricks.,True
+databricks,data engineers,Advanced,True/False,Data engineers can use the `%python` magic command to execute Python code within a SQL notebook.,True
+databricks,data engineers,Advanced,True/False,Data bricks jobs can only be triggered manually.,False
+databricks,data engineers,Advanced,True/False,Databricks provides built-in tools for data profiling and quality monitoring.,True
+databricks,data engineers,Advanced,True/False,Using Databricks Connect incurs additional costs.,False
+databricks,data engineers,Advanced,True/False,Data engineers can use the `MERGE INTO` statement in Databricks SQL to perform upserts on Delta tables.,True

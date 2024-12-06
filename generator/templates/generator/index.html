@@ -57,14 +57,5 @@
             <a href="{% url 'view_questions' csv_file_name=csv_file_name %}">View Questions</a>
         </button>
     {% endif %}
-
-    {% if questions %}
-        <h2>Generated Questions:</h2>
-        <ul>
-        {% for question in questions %}
-            <li>{{ question }}</li>
-        {% endfor %}
-        </ul>
-    {% endif %}
 </body>
 </html>
