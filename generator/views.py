@@ -9,8 +9,6 @@ from urllib.parse import quote
 from django.http import JsonResponse
 from .models import Question  # Import the model
 
-
-
 # Define the API keys
 apione = "AIzaSyDUZjA_bSO8YT0fkSEAPudyc_Kd0ew5YvM"
 apitwo = "AIzaSyA4PwhxtBusjL-uPR16exclcuNBykQcdTA"
@@ -23,11 +21,23 @@ if not os.path.exists(output_dir):
 def generate_questions(request):
     if request.method == "POST":
         # Getting form data
-        topic = request.POST.get("topic")
-        subtopic = request.POST.get("subtopic")
-        level = request.POST.get("level")
-        question_type = request.POST.get("question_type")
-        num_questions_input = request.POST.get("num_questions")
+        topic = request.POST.get("topic", "").strip()
+        subtopic = request.POST.get("subtopic", "").strip()
+        level = request.POST.get("level", "").strip()
+        question_type = request.POST.get("question_type", "").strip()
+        num_questions_input = request.POST.get("num_questions", "").strip()
+
+        # Normalize question type for validation
+        question_type_mapping = {
+            "fill ups": "Fill Ups",
+            "true/false": "True/False",
+            "multiple choice": "Multiple Choice",
+        }
+        question_type_key = question_type.lower()
+        question_type = question_type_mapping.get(question_type_key)
+
+        if not question_type:
+            return render(request, "generator/index.html", {"error": "Invalid question type selected. Please try again."})
 
         # Validate the number of questions
         try:
@@ -44,18 +54,21 @@ def generate_questions(request):
             "Fill Ups": (
                 f"Generate {{count}} Fill Ups questions on the topic '{topic}' with subtopic '{subtopic}' "
                 f"for a {level} level audience. Return the questions in the format:\n\n"
+                f"The generated questions should not have the 1.,2.,3. this like pointing numbers in the first\n"
                 f"Question: <The generated question>\n"
                 f"Answer: <The correct answer>"
             ),
             "True/False": (
                 f"Generate {{count}} True/False questions on the topic '{topic}' with subtopic '{subtopic}' "
                 f"for a {level} level audience. Return the questions in the format:\n\n"
+                f"The generated questions should not have the 1.,2.,3. this like pointing numbers in the first\n"
                 f"Question: <The generated question>\n"
                 f"Answer: <True/False>"
             ),
-            "Multiple Choice Questions": (
+            "Multiple Choice": (
                 f"Generate {{count}} Multiple Choice Questions on the topic '{topic}' with subtopic '{subtopic}' "
-                f"for a {level} level audience. Return the questions in the format:\n\n"
+                f"for a {level} level audience. Ensure that you have mentioned numbers for every generated questions .Return the questions in the format:\n\n"
+                f"The generated questions should not have the 1.,2.,3. this like pointing numbers in the first\n"
                 f"Question: <The generated question>\n"
                 f"Options: <Comma-separated options>\n"
                 f"Answer: <The correct answer>"
@@ -63,9 +76,6 @@ def generate_questions(request):
         }
 
         prompt = prompt_template.get(question_type, "")
-        if not prompt:
-            return render(request, "generator/index.html", {"error": "Invalid question type selected."})
-
         csv_columns = (
             ["Topic", "Subtopic", "Level", "Question Type", "Question", "Answer"]
             if question_type in ["Fill Ups", "True/False"]
